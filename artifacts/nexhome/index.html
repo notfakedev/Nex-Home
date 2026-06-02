@@ -1286,10 +1286,74 @@ function openCheckoutModal(){
   const total=cart.reduce((a,i)=>a+i.price*i.qty,0);
   const m=document.createElement('div');m.id='checkoutModal';
   m.style.cssText='position:fixed;inset:0;z-index:700;background:rgba(2,4,8,.9);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center;';
-  m.innerHTML=`<div style="background:var(--panel2);border:1px solid var(--rim2);border-radius:22px;padding:40px;width:min(460px,92vw);text-align:center;position:relative;"><button onclick="document.getElementById('checkoutModal').remove()" style="position:absolute;top:14px;right:14px;background:var(--rim);border:none;color:var(--snow);width:30px;height:30px;border-radius:50%;cursor:pointer;">✕</button><div style="font-size:2.5rem;margin-bottom:16px;">🎉</div><h3 style="font-family:'Rajdhani',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:10px;">Confirmar Pedido</h3><p style="color:var(--mist);font-size:.88rem;margin-bottom:24px;">Total: <b style="color:var(--white);font-family:'Rajdhani',sans-serif;font-size:1.1rem;">R$ ${total.toFixed(2).replace('.',',')}</b></p><div style="display:flex;flex-direction:column;gap:10px;"><button onclick="finalizarPedido()" class="btn-primary" style="width:100%;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>Pagar com PIX</button><button onclick="finalizarPedido()" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);padding:12px;border-radius:10px;font-family:'Exo 2',sans-serif;font-size:.88rem;cursor:pointer;">💳 Cartão de Crédito</button></div></div>`;
-  document.body.appendChild(m);m.addEventListener('click',e=>{if(e.target===m)m.remove();});
+  m.innerHTML=`<div style="background:var(--panel2);border:1px solid var(--rim2);border-radius:22px;padding:40px;width:min(460px,92vw);text-align:center;position:relative;">
+    <button onclick="document.getElementById('checkoutModal').remove()" style="position:absolute;top:14px;right:14px;background:var(--rim);border:none;color:var(--snow);width:30px;height:30px;border-radius:50%;cursor:pointer;">✕</button>
+    <div style="font-size:2.5rem;margin-bottom:16px;">🛒</div>
+    <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:10px;">Confirmar Pedido</h3>
+    <p style="color:var(--mist);font-size:.88rem;margin-bottom:24px;">Total: <b style="color:var(--white);font-family:'Rajdhani',sans-serif;font-size:1.1rem;">R$ ${total.toFixed(2).replace('.',',')}</b></p>
+    <div id="checkoutBtns" style="display:flex;flex-direction:column;gap:10px;">
+      <button id="btnMercadoPago" onclick="irParaMercadoPago()" class="btn-primary" style="width:100%;justify-content:center;font-size:.95rem;">
+        <img src="https://http2.mlstatic.com/frontend-assets/mp-web-navigation/ui-navigation/5.21.22/mercadopago/logo__large@2x.png" alt="Mercado Pago" style="height:18px;filter:brightness(0) invert(1);margin-right:6px;">
+        Pagar com Mercado Pago
+      </button>
+      <p style="color:var(--mist);font-size:.75rem;margin-top:4px;">PIX · Cartão · Boleto · Parcelamento em até 12x</p>
+    </div>
+    <div id="checkoutLoader" style="display:none;padding:16px 0;">
+      <div style="width:36px;height:36px;border:3px solid var(--rim2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px;"></div>
+      <p style="color:var(--mist);font-size:.85rem;">Conectando ao Mercado Pago...</p>
+    </div>
+  </div>`;
+  document.body.appendChild(m);
+  m.addEventListener('click',e=>{if(e.target===m)m.remove();});
 }
-function finalizarPedido(){document.getElementById('checkoutModal')?.remove();closeCart();cart=[];document.getElementById('cartCount').textContent=0;showToast('✅ Pedido realizado! Você receberá um e-mail de confirmação.','success');}
+
+async function irParaMercadoPago(){
+  const btnWrap=document.getElementById('checkoutBtns');
+  const loader=document.getElementById('checkoutLoader');
+  if(btnWrap)btnWrap.style.display='none';
+  if(loader)loader.style.display='block';
+
+  const origin=window.location.origin+window.location.pathname.replace(/\/$/,'');
+  try{
+    const resp=await fetch('/api/checkout',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        items:cart.map(i=>({name:i.name,price:i.price,qty:i.qty})),
+        back_urls:{
+          success:origin+'?pagamento=sucesso',
+          failure:origin+'?pagamento=falha',
+          pending:origin+'?pagamento=pendente'
+        }
+      })
+    });
+    const data=await resp.json();
+    if(!resp.ok)throw new Error(data.error||'Erro desconhecido');
+    const url=data.init_point||data.sandbox_init_point;
+    if(!url)throw new Error('URL de pagamento não recebida');
+    window.location.href=url;
+  }catch(err){
+    document.getElementById('checkoutModal')?.remove();
+    showToast('❌ '+err.message,'error');
+  }
+}
+
+function verificarRetornoPagamento(){
+  const params=new URLSearchParams(window.location.search);
+  const status=params.get('pagamento');
+  if(!status)return;
+  history.replaceState(null,'',window.location.pathname);
+  if(status==='sucesso'){
+    cart=[];
+    document.getElementById('cartCount').textContent=0;
+    showToast('✅ Pagamento aprovado! Obrigado pela compra.','success');
+  }else if(status==='pendente'){
+    showToast('⏳ Pagamento pendente. Você receberá a confirmação em breve.','success');
+  }else if(status==='falha'){
+    showToast('❌ Pagamento não aprovado. Tente novamente.','error');
+  }
+}
+verificarRetornoPagamento();
 
 /* ── NEWSLETTER ── */
 document.querySelector('.nl-btn').addEventListener('click',function(){
