@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NexHome — Casa Inteligente do Futuro</title>
 <meta name="description" content="Os melhores dispositivos de automação residencial com os menores preços do Brasil.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NexHome — Casa Inteligente do Futuro">
+<meta property="og:description" content="Os melhores dispositivos de automação residencial com os menores preços do Brasil. PIX, boleto e parcelamento em até 12x.">
+<meta property="og:image" content="https://nexhome.replit.app/og.png">
+<meta property="og:url" content="https://nexhome.replit.app">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NexHome — Casa Inteligente do Futuro">
+<meta name="twitter:description" content="Os melhores dispositivos de automação residencial com os menores preços do Brasil.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"NexHome","description":"Loja especializada em automação residencial","url":"https://nexhome.replit.app","contactPoint":{"@type":"ContactPoint","telephone":"+55-11-99999-9999","contactType":"customer service","availableLanguage":"Portuguese"},"address":{"@type":"PostalAddress","addressCountry":"BR"}}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -336,6 +348,49 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
 .reveal.in{opacity:1;transform:none;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+/* WHATSAPP FLOAT */
+#wa-btn{position:fixed;bottom:88px;right:28px;z-index:8000;width:54px;height:54px;border-radius:50%;background:#25D366;box-shadow:0 4px 24px rgba(37,211,102,.45);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;}
+#wa-btn:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.6);}
+#wa-btn svg{width:28px;height:28px;fill:#fff;}
+#wa-tooltip{position:fixed;bottom:100px;right:92px;z-index:8000;background:var(--panel2);border:1px solid var(--rim2);border-radius:10px;padding:8px 14px;font-size:.78rem;color:var(--snow);white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.4);pointer-events:none;opacity:0;transition:opacity .2s;}
+#wa-btn:hover+#wa-tooltip{opacity:1;}
+
+/* LGPD COOKIE BANNER */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:8500;background:rgba(6,11,20,.97);backdrop-filter:blur(24px);border-top:1px solid var(--rim2);padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;transform:translateY(100%);transition:transform .4s ease;}
+#cookie-banner.show{transform:translateY(0);}
+#cookie-banner p{font-size:.78rem;color:var(--fog);line-height:1.6;max-width:700px;flex:1;}
+#cookie-banner a{color:var(--accent);text-decoration:underline;cursor:pointer;}
+.cookie-btns{display:flex;gap:10px;flex-shrink:0;}
+.btn-cookie-ok{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border:none;padding:10px 22px;border-radius:9px;font-family:'Exo 2',sans-serif;font-size:.8rem;font-weight:700;cursor:pointer;transition:transform .2s;}
+.btn-cookie-ok:hover{transform:translateY(-1px);}
+.btn-cookie-rej{background:transparent;color:var(--mist);border:1px solid var(--rim2);padding:10px 18px;border-radius:9px;font-family:'Exo 2',sans-serif;font-size:.8rem;cursor:pointer;}
+
+/* LEGAL MODAL */
+#legalModal{display:none;position:fixed;inset:0;z-index:9000;background:rgba(2,4,8,.92);backdrop-filter:blur(20px);align-items:center;justify-content:center;}
+#legalModal.open{display:flex;}
+.legal-inner{background:var(--panel2);border:1px solid var(--rim2);border-radius:22px;padding:48px;width:min(700px,92vw);max-height:82vh;overflow-y:auto;position:relative;scrollbar-width:thin;scrollbar-color:var(--rim) transparent;}
+.legal-close{position:absolute;top:16px;right:16px;background:var(--rim);border:none;color:var(--snow);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:.9rem;transition:background .2s;}
+.legal-close:hover{background:var(--rim2);}
+.legal-inner h2{font-family:'Rajdhani',sans-serif;font-size:1.6rem;font-weight:700;color:var(--white);margin-bottom:24px;}
+.legal-inner h3{font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;color:var(--blue3);margin:20px 0 8px;}
+.legal-inner p,.legal-inner li{font-size:.85rem;color:var(--fog);line-height:1.8;}
+.legal-inner ul{padding-left:20px;margin-bottom:12px;}
+.legal-tabs{display:flex;gap:0;border-bottom:1px solid var(--rim);margin-bottom:28px;}
+.legal-tab-btn{padding:10px 20px;font-family:'Exo 2',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.06em;background:none;border:none;color:var(--mist);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .2s,border-color .2s;}
+.legal-tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
+.legal-tab-panel{display:none;}
+.legal-tab-panel.active{display:block;}
+
+/* WISH BUTTON ACTIVE */
+.pp-btn-wish.wished{background:rgba(255,77,46,.1);border-color:var(--ember);color:var(--ember);}
+
+@media(max-width:600px){
+  #cookie-banner{flex-direction:column;align-items:flex-start;}
+  .cookie-btns{width:100%;}
+  .btn-cookie-ok,.btn-cookie-rej{flex:1;text-align:center;}
+}
 
 @media(max-width:960px){
   .hero-float{display:none;}
@@ -362,6 +417,68 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
 </style>
 </head>
 <body>
+
+<!-- LGPD COOKIE BANNER -->
+<div id="cookie-banner">
+  <p>🍪 Usamos cookies para melhorar sua experiência, analisar o tráfego e personalizar conteúdo. Ao continuar, você concorda com nossa <a onclick="openLegal('privacidade')">Política de Privacidade</a> e o uso de cookies conforme a <b>LGPD</b> (Lei 13.709/2018).</p>
+  <div class="cookie-btns">
+    <button class="btn-cookie-rej" onclick="rejeitarCookies()">Apenas essenciais</button>
+    <button class="btn-cookie-ok" onclick="aceitarCookies()">✓ Aceitar todos</button>
+  </div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a id="wa-btn" href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20nos%20produtos%20NexHome." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div id="wa-tooltip">Falar no WhatsApp</div>
+
+<!-- LEGAL MODAL -->
+<div id="legalModal">
+  <div class="legal-inner">
+    <button class="legal-close" onclick="closeLegal()">✕</button>
+    <h2 id="legalTitle">Documentos Legais</h2>
+    <div class="legal-tabs">
+      <button class="legal-tab-btn active" onclick="switchLegalTab(this,'ltab-priv')">Privacidade</button>
+      <button class="legal-tab-btn" onclick="switchLegalTab(this,'ltab-termos')">Termos de Uso</button>
+      <button class="legal-tab-btn" onclick="switchLegalTab(this,'ltab-troca')">Trocas &amp; Devoluções</button>
+    </div>
+    <div id="ltab-priv" class="legal-tab-panel active">
+      <h3>Política de Privacidade — LGPD</h3>
+      <p>A NexHome está comprometida com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei 13.709/2018 — LGPD).</p>
+      <h3>Dados coletados</h3>
+      <ul><li>Nome e e-mail (newsletter e cadastro)</li><li>Endereço de entrega (pedidos)</li><li>Dados de navegação (cookies analíticos)</li></ul>
+      <h3>Finalidade</h3>
+      <ul><li>Processamento de pedidos e pagamentos</li><li>Envio de ofertas e novidades (com consentimento)</li><li>Melhoria da experiência no site</li></ul>
+      <h3>Seus direitos (Art. 18 LGPD)</h3>
+      <p>Você tem direito de acessar, corrigir, excluir ou portabilizar seus dados. Entre em contato: <b>privacidade@nexhome.com.br</b></p>
+      <h3>Retenção</h3>
+      <p>Dados de pedidos são mantidos por 5 anos conforme legislação fiscal. Dados de marketing são excluídos mediante solicitação.</p>
+    </div>
+    <div id="ltab-termos" class="legal-tab-panel">
+      <h3>Termos de Uso</h3>
+      <p>Ao utilizar o site NexHome, você concorda com os presentes termos, regidos pela Lei 7.962/2013 (comércio eletrônico) e pelo Código de Defesa do Consumidor (Lei 8.078/90).</p>
+      <h3>Identificação da empresa</h3>
+      <p><b>NexHome Comércio de Eletrônicos Ltda.</b><br>CNPJ: <b>XX.XXX.XXX/XXXX-XX</b> (preencha com seu CNPJ)<br>Endereço: Rua das Inovações, 1000 — São Paulo/SP<br>E-mail: contato@nexhome.com.br</p>
+      <h3>Produtos</h3>
+      <p>Todos os produtos comercializados possuem certificação Anatel e estão em conformidade com as normas brasileiras. Preços sujeitos a alteração sem aviso prévio.</p>
+      <h3>Pagamento</h3>
+      <p>Aceitos: PIX, boleto bancário, cartão de crédito em até 12x. Processamento via Mercado Pago.</p>
+    </div>
+    <div id="ltab-troca" class="legal-tab-panel">
+      <h3>Política de Trocas e Devoluções</h3>
+      <p>Em conformidade com o Art. 49 do Código de Defesa do Consumidor (Lei 8.078/90):</p>
+      <h3>Direito de arrependimento</h3>
+      <p>Você tem <b>7 dias corridos</b> após o recebimento para desistir da compra, sem necessidade de justificativa. O produto deve estar em sua embalagem original, sem uso.</p>
+      <h3>Como solicitar</h3>
+      <ul><li>Entre em contato pelo WhatsApp ou e-mail: trocas@nexhome.com.br</li><li>Informe o número do pedido e o motivo</li><li>O frete de devolução é por nossa conta</li><li>O reembolso é realizado em até 10 dias úteis</li></ul>
+      <h3>Garantia</h3>
+      <p>Todos os produtos possuem <b>garantia de 12 meses</b> contra defeitos de fabricação, conforme o CDC.</p>
+      <h3>SAC — Serviço de Atendimento ao Consumidor</h3>
+      <p>Atendimento de segunda a sexta, das 9h às 18h.<br>WhatsApp: (11) 99999-9999<br>E-mail: sac@nexhome.com.br</p>
+    </div>
+  </div>
+</div>
 
 <div id="cur"></div>
 <div id="curR"></div>
@@ -666,7 +783,20 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
     <div class="footer-col"><h4>Empresa</h4><ul><li><a href="#">Sobre nós</a></li><li><a href="#">Blog</a></li><li><a href="#">Parceiros</a></li><li><a href="#">Trabalhe conosco</a></li></ul></div>
     <div class="footer-col"><h4>Suporte</h4><ul><li><a href="#">Central de ajuda</a></li><li><a href="#">Rastreio</a></li><li><a href="#">Trocas</a></li><li><a href="#">Contato</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><p>© 2026 NexHome. Todos os direitos reservados.</p><p>Feito com <span>♥</span> para a casa inteligente do futuro</p></div>
+  <div class="footer-bottom" style="flex-direction:column;gap:14px;text-align:center;">
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
+      <a onclick="openLegal('privacidade')" style="color:var(--mist);font-size:.75rem;cursor:pointer;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--blue3)'" onmouseout="this.style.color='var(--mist)'">Política de Privacidade</a>
+      <a onclick="openLegal('termos')" style="color:var(--mist);font-size:.75rem;cursor:pointer;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--blue3)'" onmouseout="this.style.color='var(--mist)'">Termos de Uso</a>
+      <a onclick="openLegal('troca')" style="color:var(--mist);font-size:.75rem;cursor:pointer;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--blue3)'" onmouseout="this.style.color='var(--mist)'">Trocas &amp; Devoluções</a>
+      <a href="https://wa.me/5511999999999" target="_blank" style="color:var(--mist);font-size:.75rem;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--blue3)'" onmouseout="this.style.color='var(--mist)'">SAC: (11) 99999-9999</a>
+    </div>
+    <p style="font-size:.72rem;color:var(--mist);">NexHome Comércio de Eletrônicos Ltda. — CNPJ: <b style="color:var(--fog)">XX.XXX.XXX/XXXX-XX</b> — São Paulo/SP</p>
+    <div style="display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;">
+      <p style="font-size:.72rem;color:var(--mist);">© 2026 NexHome. Todos os direitos reservados.</p>
+      <span style="color:var(--rim2);font-size:.7rem;">|</span>
+      <p style="font-size:.72rem;color:var(--mist);">Feito com <span style="color:var(--accent)">♥</span> para a casa inteligente do futuro</p>
+    </div>
+  </div>
 </footer>
 
 </div><!-- /mainSite -->
@@ -690,7 +820,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         <div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Iluminação Smart</a><span>›</span> Smart Lâmpada RGB+</div>
         <div class="pp-cat-label">Iluminação Smart</div>
         <div class="pp-product-name">Smart Lâmpada Wi-Fi RGB+ Positivo</div>
-        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">5.0</span><span class="pp-rating-count">1.240 avaliações</span></div>
+        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">1.240 avaliações</span></div>
         <div class="pp-badge-row"><span class="pp-badge badge-fire">🔥 Mais vendido</span><span class="pp-badge badge-new" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);box-shadow:none;">✓ Anatel</span><span class="pp-badge" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);color:var(--gold);">★ Plug &amp; Play</span></div>
         <div class="pp-price-block"><span class="pp-price-old">De R$ 79,90</span><span class="pp-price-now"><sup>R$</sup> 55<sub>,00</sub></span><span class="pp-discount-tag">-31% OFF</span><span class="pp-installments">ou <b>3x R$ 18,33</b> sem juros no cartão</span></div>
         <div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Smart Lâmpada RGB+',55,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
@@ -743,7 +873,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         </div>
         <div class="pp-tab-panel" id="tab-l-rev">
           <div class="rating-summary">
-            <div class="rating-big"><div class="rating-big-num">5.0</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">1.240 avaliações</div></div>
+            <div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">1.240 avaliações</div></div>
             <div class="rating-bars">
               <div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:91%"></div></div><span class="rbar-pct">91%</span></div>
               <div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:6%"></div></div><span class="rbar-pct">6%</span></div>
@@ -779,7 +909,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         <div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Tomadas Smart</a><span>›</span> Smart Plug Max 16A</div>
         <div class="pp-cat-label">Tomada Inteligente</div>
         <div class="pp-product-name">Smart Plug Max Wi-Fi 16A Positivo</div>
-        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">5.0</span><span class="pp-rating-count">876 avaliações</span></div>
+        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.9</span><span class="pp-rating-count">876 avaliações</span></div>
         <div class="pp-badge-row"><span class="pp-badge badge-new">✨ Top Vendas</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);box-shadow:none;">✓ Anatel</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">⚡ Monitor Energia</span></div>
         <div class="pp-price-block"><span class="pp-price-old">De R$ 189,90</span><span class="pp-price-now"><sup>R$</sup> 139<sub>,00</sub></span><span class="pp-discount-tag">-27% OFF</span><span class="pp-installments">ou <b>3x R$ 46,33</b> sem juros no cartão</span></div>
         <div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Smart Plug Max 16A',139,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
@@ -831,7 +961,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         </div>
         <div class="pp-tab-panel" id="tab-sp-rev">
           <div class="rating-summary">
-            <div class="rating-big"><div class="rating-big-num">5.0</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">876 avaliações</div></div>
+            <div class="rating-big"><div class="rating-big-num">4.9</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">876 avaliações</div></div>
             <div class="rating-bars">
               <div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:88%"></div></div><span class="rbar-pct">88%</span></div>
               <div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:9%"></div></div><span class="rbar-pct">9%</span></div>
@@ -866,7 +996,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         <div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Assistentes de Voz</a><span>›</span> Echo Dot 5ª Gen</div>
         <div class="pp-cat-label">Assistente de Voz</div>
         <div class="pp-product-name">Amazon Echo Dot 5ª Geração</div>
-        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">5.0</span><span class="pp-rating-count">15.290 avaliações</span></div>
+        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.9</span><span class="pp-rating-count">15.290 avaliações</span></div>
         <div class="pp-badge-row"><span class="pp-badge" style="background:rgba(255,184,0,.1);border:1px solid rgba(255,184,0,.3);color:var(--gold);">⭐ Mais avaliado</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">🎙️ Alexa Built-in</span></div>
         <div class="pp-price-block"><span class="pp-price-old">De R$ 549,00</span><span class="pp-price-now"><sup>R$</sup> 459<sub>,00</sub></span><span class="pp-discount-tag">-16% OFF</span><span class="pp-installments">ou <b>6x R$ 76,50</b> sem juros no cartão</span></div>
         <div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Echo Dot 5ª Geração',459,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
@@ -917,7 +1047,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         </div>
         <div class="pp-tab-panel" id="tab-ed-rev">
           <div class="rating-summary">
-            <div class="rating-big"><div class="rating-big-num">5.0</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">15.290 avaliações</div></div>
+            <div class="rating-big"><div class="rating-big-num">4.9</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">15.290 avaliações</div></div>
             <div class="rating-bars">
               <div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:92%"></div></div><span class="rbar-pct">92%</span></div>
               <div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:6%"></div></div><span class="rbar-pct">6%</span></div>
@@ -952,7 +1082,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         <div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Sensores</a><span>›</span> Sensor MSA 1001</div>
         <div class="pp-cat-label">Segurança Smart</div>
         <div class="pp-product-name">Sensor de Abertura Intelbras MSA 1001</div>
-        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">5.0</span><span class="pp-rating-count">632 avaliações</span></div>
+        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.7</span><span class="pp-rating-count">632 avaliações</span></div>
         <div class="pp-badge-row"><span class="pp-badge badge-fire">🔥 Custo-benefício</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">Zigbee 3.0</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">🔋 12 meses</span></div>
         <div class="pp-price-block"><span class="pp-price-old">De R$ 120,00</span><span class="pp-price-now"><sup>R$</sup> 82<sub>,00</sub></span><span class="pp-discount-tag">-32% OFF</span><span class="pp-installments">ou <b>3x R$ 27,33</b> sem juros no cartão</span></div>
         <div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Sensor Intelbras MSA',82,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
@@ -1000,7 +1130,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         </div>
         <div class="pp-tab-panel" id="tab-sn-rev">
           <div class="rating-summary">
-            <div class="rating-big"><div class="rating-big-num">5.0</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">632 avaliações</div></div>
+            <div class="rating-big"><div class="rating-big-num">4.7</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">632 avaliações</div></div>
             <div class="rating-bars">
               <div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:85%"></div></div><span class="rbar-pct">85%</span></div>
               <div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:10%"></div></div><span class="rbar-pct">10%</span></div>
@@ -1123,7 +1253,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         <div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Fechaduras Smart</a><span>›</span> Aqara U400</div>
         <div class="pp-cat-label">Fechadura Smart</div>
         <div class="pp-product-name">Aqara Smart Lock U400</div>
-        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">5.0</span><span class="pp-rating-count">204 avaliações</span></div>
+        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">204 avaliações</span></div>
         <div class="pp-badge-row"><span class="pp-badge badge-new">⭐ CES 2026</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">Matter</span><span class="pp-badge" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);color:var(--gold);">👆 Biometria</span></div>
         <div class="pp-price-block"><span class="pp-price-old">De R$ 1.890,00</span><span class="pp-price-now"><sup>R$</sup> 1.590<sub>,00</sub></span><span class="pp-discount-tag">-16% OFF</span><span class="pp-installments">ou <b>12x R$ 132,50</b> sem juros no cartão</span></div>
         <div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Aqara Smart Lock U400',1590,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
@@ -1175,7 +1305,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         </div>
         <div class="pp-tab-panel" id="tab-fe-rev">
           <div class="rating-summary">
-            <div class="rating-big"><div class="rating-big-num">5.0</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">204 avaliações</div></div>
+            <div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">204 avaliações</div></div>
             <div class="rating-bars">
               <div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:90%"></div></div><span class="rbar-pct">90%</span></div>
               <div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:7%"></div></div><span class="rbar-pct">7%</span></div>
@@ -1220,11 +1350,12 @@ document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseent
 
 /* ── PARTICLES ── */
 const cvs=document.getElementById('cvs'),ctx=cvs.getContext('2d');
-let W,H;
+let W,H,particlePaused=false;
 const resize=()=>{W=cvs.width=innerWidth;H=cvs.height=innerHeight;};
 resize();addEventListener('resize',resize);
+document.addEventListener('visibilitychange',()=>{particlePaused=document.hidden;});
 const pts=Array.from({length:65},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.4+.3,a:Math.random()*.35+.05}));
-(function draw(){ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,204,255,${p.a})`;ctx.fill();});for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);if(d<110){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(14,111,232,${.1*(1-d/110)})`;ctx.lineWidth=.6;ctx.stroke();}}requestAnimationFrame(draw);})();
+(function draw(){if(!particlePaused){ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,204,255,${p.a})`;ctx.fill();});for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);if(d<110){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(14,111,232,${.1*(1-d/110)})`;ctx.lineWidth=.6;ctx.stroke();}}}requestAnimationFrame(draw);})();
 
 /* ── NAV ── */
 addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('solid',scrollY>50);});
@@ -1235,7 +1366,7 @@ document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
 /* ── COUNTER ── */
 function animCount(el,target,dur=1400){const start=performance.now();(function tick(now){const t=Math.min((now-start)/dur,1);el.textContent=Math.round(t*t*(3-2*t)*target);if(t<1)requestAnimationFrame(tick);})(start);}
-const heroObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animCount(document.getElementById('ctr1'),120);animCount(document.getElementById('ctr2'),55);heroObs.disconnect();}}),{threshold:.3});
+const heroObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animCount(document.getElementById('ctr1'),47);animCount(document.getElementById('ctr2'),55);heroObs.disconnect();}}),{threshold:.3});
 heroObs.observe(document.querySelector('.hero-stats'));
 
 /* ── COUNTDOWN (FIX #4: target-time, zero drift) ── */
@@ -1252,13 +1383,17 @@ tickCd();setInterval(tickCd,1000);
 /* ── TOAST ── */
 function showToast(msg,type='success'){const ex=document.getElementById('nx-toast');if(ex)ex.remove();const t=document.createElement('div');t.id='nx-toast';const colors={success:'linear-gradient(135deg,#1B5E20,#2E7D32)',error:'linear-gradient(135deg,#B71C1C,#C62828)',info:'linear-gradient(135deg,var(--blue),var(--blue2))'};t.style.cssText=`position:fixed;bottom:32px;right:32px;z-index:9000;background:${colors[type]};color:#fff;padding:14px 22px;border-radius:12px;font-family:'Exo 2',sans-serif;font-size:.88rem;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,.4);display:flex;align-items:center;gap:10px;transform:translateY(20px);opacity:0;transition:transform .3s,opacity .3s;max-width:320px;`;t.innerHTML=msg;document.body.appendChild(t);requestAnimationFrame(()=>{t.style.transform='translateY(0)';t.style.opacity='1';});setTimeout(()=>{t.style.transform='translateY(20px)';t.style.opacity='0';setTimeout(()=>t.remove(),300);},3000);}
 
-/* ── CART ── */
-let cart=[];
+/* ── CART (localStorage persistence) ── */
+let cart=JSON.parse(localStorage.getItem('nx-cart')||'[]');
+function saveCart(){localStorage.setItem('nx-cart',JSON.stringify(cart));}
+document.getElementById('cartCount').textContent=cart.reduce((a,i)=>a+i.qty,0);
+
 /* FIX #1: use closest('button') so SVG child clicks still target the button */
 function addToCart(name,price,ev){
   if(ev)ev.stopPropagation();
   const ex=cart.find(i=>i.name===name);ex?ex.qty++:cart.push({name,price,qty:1});
   document.getElementById('cartCount').textContent=cart.reduce((a,i)=>a+i.qty,0);
+  saveCart();
   const btn=ev?.target?.closest('button')||ev?.target;
   if(btn&&btn.tagName==='BUTTON'){
     const orig=btn.innerHTML;
@@ -1267,8 +1402,8 @@ function addToCart(name,price,ev){
   }
   showToast(`🛒 <b>${name}</b> adicionado!`,'success');
 }
-function removeFromCart(name){cart=cart.filter(i=>i.name!==name);document.getElementById('cartCount').textContent=cart.reduce((a,i)=>a+i.qty,0);renderCart();}
-function changeQty(name,delta){const item=cart.find(i=>i.name===name);if(!item)return;item.qty+=delta;if(item.qty<=0)cart=cart.filter(i=>i.name!==name);document.getElementById('cartCount').textContent=cart.reduce((a,i)=>a+i.qty,0);renderCart();}
+function removeFromCart(name){cart=cart.filter(i=>i.name!==name);document.getElementById('cartCount').textContent=cart.reduce((a,i)=>a+i.qty,0);saveCart();renderCart();}
+function changeQty(name,delta){const item=cart.find(i=>i.name===name);if(!item)return;item.qty+=delta;if(item.qty<=0)cart=cart.filter(i=>i.name!==name);document.getElementById('cartCount').textContent=cart.reduce((a,i)=>a+i.qty,0);saveCart();renderCart();}
 function renderCart(){
   const items=document.getElementById('cartItems');
   if(!cart.length){items.innerHTML='<div class="cart-empty">Seu carrinho está vazio 🛒</div>';document.getElementById('cartTotal').textContent='R$ 0,00';return;}
@@ -1344,7 +1479,7 @@ function verificarRetornoPagamento(){
   if(!status)return;
   history.replaceState(null,'',window.location.pathname);
   if(status==='sucesso'){
-    cart=[];
+    cart=[];saveCart();
     document.getElementById('cartCount').textContent=0;
     showToast('✅ Pagamento aprovado! Obrigado pela compra.','success');
   }else if(status==='pendente'){
@@ -1354,6 +1489,64 @@ function verificarRetornoPagamento(){
   }
 }
 verificarRetornoPagamento();
+
+/* ── FAVORITES (localStorage) ── */
+let wishlist=JSON.parse(localStorage.getItem('nx-wish')||'[]');
+function saveWish(){localStorage.setItem('nx-wish',JSON.stringify(wishlist));}
+function toggleWish(name,btn){
+  if(wishlist.includes(name)){
+    wishlist=wishlist.filter(w=>w!==name);
+    btn.classList.remove('wished');btn.textContent='♡ Favoritar';
+    showToast(`💔 <b>${name}</b> removido dos favoritos`,'info');
+  }else{
+    wishlist.push(name);
+    btn.classList.add('wished');btn.textContent='♥ Favoritado';
+    showToast(`♥ <b>${name}</b> adicionado aos favoritos!`,'success');
+  }
+  saveWish();
+}
+document.querySelectorAll('.pp-btn-wish').forEach(btn=>{
+  const name=btn.closest('.pp-info')?.querySelector('.pp-product-name')?.textContent?.trim();
+  if(name&&wishlist.includes(name)){btn.classList.add('wished');btn.textContent='♥ Favoritado';}
+  if(name)btn.onclick=()=>toggleWish(name,btn);
+});
+
+/* ── COOKIE CONSENT (LGPD) ── */
+function initCookieBanner(){
+  if(!localStorage.getItem('nx-cookie')){
+    setTimeout(()=>document.getElementById('cookie-banner').classList.add('show'),1200);
+  }
+}
+function aceitarCookies(){
+  localStorage.setItem('nx-cookie','all');
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+function rejeitarCookies(){
+  localStorage.setItem('nx-cookie','essential');
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+initCookieBanner();
+
+/* ── LEGAL MODAL ── */
+function openLegal(tab){
+  const modal=document.getElementById('legalModal');
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+  if(tab==='privacidade')switchLegalTab(document.querySelector('.legal-tab-btn'),'ltab-priv');
+  else if(tab==='termos'){const btns=document.querySelectorAll('.legal-tab-btn');switchLegalTab(btns[1],'ltab-termos');}
+  else if(tab==='troca'){const btns=document.querySelectorAll('.legal-tab-btn');switchLegalTab(btns[2],'ltab-troca');}
+}
+function closeLegal(){
+  document.getElementById('legalModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function switchLegalTab(btn,panelId){
+  document.querySelectorAll('.legal-tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.legal-tab-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById(panelId)?.classList.add('active');
+}
+document.getElementById('legalModal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeLegal();});
 
 /* ── NEWSLETTER ── */
 document.querySelector('.nl-btn').addEventListener('click',function(){
