@@ -168,6 +168,7 @@ section{position:relative;z-index:1;}
 .pcard:hover{transform:translateY(-10px) scale(1.01);border-color:rgba(37,137,255,.35);box-shadow:0 28px 64px rgba(14,111,232,.22);}
 .pcard-img{height:200px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--panel2),var(--surface));display:flex;align-items:center;justify-content:center;cursor:pointer;}
 .pcard-img::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(14,111,232,.18),transparent 68%);}
+.pcard-img--photo::after{display:none;}
 .pcard-img svg,.pcard-img img{position:relative;z-index:1;transition:transform .4s,filter .4s;}
 .pcard:hover .pcard-img svg,.pcard:hover .pcard-img img{transform:scale(1.1) translateY(-5px);}
 .pcard-img img{width:100%;height:100%;object-fit:contain;object-position:center;padding:12px;box-sizing:border-box;}
@@ -629,7 +630,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
 
     <div class="pcard reveal">
       <span class="pcard-badge badge-fire">🔥 Mais vendido</span>
-      <div class="pcard-img" onclick="openProductPage('lampada')" title="Ver detalhes" style="background:#fff;">
+      <div class="pcard-img pcard-img--photo" onclick="openProductPage('lampada')" title="Ver detalhes" style="background:#fff;">
         <img src="/lampada-rgb2.png" alt="Smart Lâmpada Wi-Fi RGB+ Alexa">
       </div>
       <div class="pcard-body">
