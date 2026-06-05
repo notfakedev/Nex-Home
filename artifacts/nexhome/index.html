@@ -558,10 +558,10 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
   </div>
   <div class="hero-float">
     <div class="float-grid">
-      <div class="fcard" onclick="openProductPage('lampada')"><div class="fcard-icon">💡</div><div class="fcard-name">Lâmpada RGB Wi-Fi</div><div class="fcard-status">Online — Sala</div><div class="fcard-price">R$ 75,00</div></div>
-      <div class="fcard" onclick="openProductPage('smartplug')"><div class="fcard-icon">🔌</div><div class="fcard-name">Smart Plug 16A</div><div class="fcard-status">Monitorando</div><div class="fcard-price">R$ 139,00</div></div>
-      <div class="fcard" onclick="openProductPage('echodot')"><div class="fcard-icon">🔊</div><div class="fcard-name">Echo Dot 5ª Gen</div><div class="fcard-status">Alexa ativa</div><div class="fcard-price">R$ 459,00</div></div>
-      <div class="fcard" onclick="openProductPage('sensor')"><div class="fcard-icon">🚪</div><div class="fcard-name">Sensor Abertura</div><div class="fcard-status">Seguro — Porta</div><div class="fcard-price">R$ 82,00</div></div>
+      <div class="fcard" onclick="openProductPage('lampada')"><div class="fcard-icon">💡</div><div class="fcard-name">Lâmpada RGB Wi-Fi</div><div class="fcard-status">Online — Sala</div><div class="fcard-price">R$ 75,98</div></div>
+      <div class="fcard" onclick="openProductPage('tomada')"><div class="fcard-icon">🔌</div><div class="fcard-name">Tomada Wi-Fi</div><div class="fcard-status">Monitorando</div><div class="fcard-price">R$ 66,58</div></div>
+      <div class="fcard" onclick="openProductPage('echodot')"><div class="fcard-icon">🔊</div><div class="fcard-name">Alexa Echo Dot</div><div class="fcard-status">Alexa ativa</div><div class="fcard-price">R$ 734,40</div></div>
+      <div class="fcard" onclick="openProductPage('fechadura')"><div class="fcard-icon">🔐</div><div class="fcard-name">Fechadura Biométrica</div><div class="fcard-status">Protegida</div><div class="fcard-price">R$ 415,98</div></div>
     </div>
   </div>
 </section>
@@ -625,116 +625,196 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
 
 <!-- PRODUCTS -->
 <section class="products-section" id="produtos">
-  <div class="section-header reveal"><div class="sh-label">Catálogo</div><h2>Produtos em Destaque</h2><p>Selecionados com os melhores preços e homologados no Brasil</p></div>
+  <div class="section-header reveal"><div class="sh-label">Catálogo</div><h2>Produtos em Destaque</h2><p>Todos selecionados diretamente da Amazon Brasil — os melhores preços com suporte em PT-BR</p></div>
   <div class="products-grid">
 
+    <!-- 1. Lâmpada -->
     <div class="pcard reveal">
       <span class="pcard-badge badge-fire">🔥 Mais vendido</span>
       <div class="pcard-img pcard-img--photo" onclick="openProductPage('lampada')" title="Ver detalhes" style="background:#fff;">
-        <img src="/lampada-rgb2.png" alt="Smart Lâmpada Wi-Fi RGB+ Alexa">
+        <img src="/lampada-rgb2.png" alt="Smart Lâmpada Wi-Fi RGB+">
       </div>
       <div class="pcard-body">
         <div class="pcard-cat">Iluminação Smart</div>
         <div class="pcard-name">Smart Lâmpada Wi-Fi RGB+ Alexa</div>
         <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(1.240)</span></div>
-        <div class="pcard-desc">Controle sua Smart Lâmpada por voz através da Amazon Alexa ou através do app IzySmart, deixando sua casa inteligente.</div>
+        <div class="pcard-desc">16 milhões de cores RGB+. Controle por voz Alexa. App IzySmart PT-BR. Bivolt.</div>
         <div class="pcard-footer">
           <div class="pcard-prices"><span class="p-old">R$109,99</span><span class="p-new">R$ 75<small>,98</small></span></div>
-          <div style="display:flex;gap:8px;">
-            <button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('lampada')">Ver mais</button>
-            <button class="btn-buy" onclick="addToCart('Smart Lâmpada RGB+',75,event)">🛒 Comprar</button>
-          </div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('lampada')">Ver mais</button><button class="btn-buy" onclick="addToCart('Smart Lâmpada RGB+',75.98,event)">🛒 Comprar</button></div>
         </div>
       </div>
     </div>
 
+    <!-- 2. Echo Dot -->
     <div class="pcard reveal">
-      <span class="pcard-badge badge-new">✨ Top vendas</span>
-      <div class="pcard-img" onclick="openProductPage('smartplug')" title="Ver detalhes">
-        <svg width="100" height="120" viewBox="0 0 100 120"><defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#5AABFF"/><stop offset="100%" stop-color="#0E6FE8"/></linearGradient></defs>
-        <rect x="22" y="18" width="56" height="68" rx="10" fill="url(#g2)" opacity=".9"/><rect x="24" y="20" width="52" height="64" rx="9" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1"/><rect x="31" y="34" width="14" height="20" rx="4" fill="rgba(0,0,0,.45)"/><rect x="55" y="34" width="14" height="20" rx="4" fill="rgba(0,0,0,.45)"/><circle cx="50" cy="68" r="7" fill="rgba(0,0,0,.35)"/><rect x="47" y="86" width="6" height="16" rx="3" fill="#0D1628"/><circle cx="50" cy="24" r="4" fill="#00FFD0" opacity=".9"/><circle cx="50" cy="24" r="2" fill="white"/><text x="50" y="60" text-anchor="middle" fill="rgba(255,255,255,.35)" font-size="8" font-family="monospace" font-weight="bold">16A</text></svg>
-      </div>
-      <div class="pcard-body">
-        <div class="pcard-cat">Tomada Inteligente</div>
-        <div class="pcard-name">Smart Plug Max Wi-Fi 16A Positivo</div>
-        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(876)</span></div>
-        <div class="pcard-desc">Monitor de energia em tempo real. Wi-Fi sem hub. Bivolt. Anatel certificado.</div>
-        <div class="pcard-footer">
-          <div class="pcard-prices"><span class="p-old">R$ 189,90</span><span class="p-new">R$ 139<small>,00</small></span></div>
-          <div style="display:flex;gap:8px;">
-            <button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('smartplug')">Ver mais</button>
-            <button class="btn-buy" onclick="addToCart('Smart Plug Max 16A',139,event)">🛒 Comprar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pcard reveal">
+      <span class="pcard-badge badge-new">⭐ Amazon</span>
       <div class="pcard-img" onclick="openProductPage('echodot')" title="Ver detalhes">
-        <svg width="100" height="120" viewBox="0 0 100 120"><defs><radialGradient id="g3" cx="50%" cy="28%" r="58%"><stop offset="0%" stop-color="#1E2D45"/><stop offset="100%" stop-color="#060B14"/></radialGradient></defs>
-        <ellipse cx="50" cy="72" rx="30" ry="33" fill="url(#g3)" stroke="#1C2E4A" stroke-width="1.5"/><ellipse cx="50" cy="39" rx="30" ry="9" fill="#0D1628" stroke="#1C2E4A" stroke-width="1"/><circle cx="50" cy="39" r="16" fill="#060B14" stroke="#1C2E4A" stroke-width="1.5"/><circle cx="50" cy="39" r="10" fill="#00CCFF" opacity=".18"/><circle cx="50" cy="39" r="6" fill="#00CCFF" opacity=".55"/><circle cx="50" cy="39" r="2.5" fill="white"/><ellipse cx="50" cy="72" rx="22" ry="6" fill="none" stroke="#0E6FE8" stroke-width="1" opacity=".5"/><ellipse cx="50" cy="72" rx="13" ry="4" fill="none" stroke="#0E6FE8" stroke-width="1" opacity=".3"/></svg>
+        <svg width="110" height="120" viewBox="0 0 110 120"><defs><radialGradient id="g2" cx="50%" cy="30%" r="60%"><stop offset="0%" stop-color="#1E2D45"/><stop offset="100%" stop-color="#060B14"/></radialGradient></defs>
+        <ellipse cx="55" cy="78" rx="38" ry="36" fill="url(#g2)" stroke="#1C2E4A" stroke-width="1.5"/><ellipse cx="55" cy="42" rx="38" ry="11" fill="#0D1628" stroke="#1C2E4A" stroke-width="1"/><circle cx="55" cy="42" r="22" fill="#060B14" stroke="#1C2E4A" stroke-width="1.5"/><circle cx="55" cy="42" r="14" fill="#00CCFF" opacity=".14"/><circle cx="55" cy="42" r="9" fill="#00CCFF" opacity=".45"/><circle cx="55" cy="42" r="4" fill="white" opacity=".9"/><ellipse cx="55" cy="78" rx="26" ry="7" fill="none" stroke="#0E6FE8" stroke-width="1" opacity=".5"/><ellipse cx="55" cy="78" rx="15" ry="4" fill="none" stroke="#0E6FE8" stroke-width="1" opacity=".3"/></svg>
       </div>
       <div class="pcard-body">
         <div class="pcard-cat">Assistente de Voz</div>
-        <div class="pcard-name">Amazon Echo Dot 5ª Geração</div>
+        <div class="pcard-name">Alexa Echo Dot Amazon</div>
         <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(15.290)</span></div>
-        <div class="pcard-desc">Alexa integrada. Bivolt. App PT-BR. Som 360° com graves mais potentes.</div>
+        <div class="pcard-desc">Controle a casa com a voz. Som 360°. Sensor de temperatura. Bivolt. Eero integrado.</div>
         <div class="pcard-footer">
-          <div class="pcard-prices"><span class="p-old">R$ 549,00</span><span class="p-new">R$ 459<small>,00</small></span></div>
-          <div style="display:flex;gap:8px;">
-            <button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('echodot')">Ver mais</button>
-            <button class="btn-buy" onclick="addToCart('Echo Dot 5ª Geração',459,event)">🛒 Comprar</button>
-          </div>
+          <div class="pcard-prices"><span class="p-old">R$949,90</span><span class="p-new">R$ 734<small>,40</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('echodot')">Ver mais</button><button class="btn-buy" onclick="addToCart('Alexa Echo Dot',734.40,event)">🛒 Comprar</button></div>
         </div>
       </div>
     </div>
 
+    <!-- 3. Echo Pop -->
+    <div class="pcard reveal">
+      <span class="pcard-badge badge-new">✨ Novo</span>
+      <div class="pcard-img" onclick="openProductPage('echopop')" title="Ver detalhes">
+        <svg width="110" height="115" viewBox="0 0 110 115"><defs><radialGradient id="g3" cx="40%" cy="35%" r="65%"><stop offset="0%" stop-color="#243B60"/><stop offset="100%" stop-color="#060B14"/></radialGradient></defs>
+        <ellipse cx="55" cy="88" rx="36" ry="9" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/>
+        <path d="M19,88 Q19,40 55,38 Q91,40 91,88 Z" fill="url(#g3)" stroke="#1C2E4A" stroke-width="1.5"/>
+        <path d="M28,72 Q30,54 55,52 Q80,54 82,72" fill="none" stroke="#00CCFF" stroke-width="1" opacity=".5" stroke-dasharray="3,3"/>
+        <path d="M34,67 Q36,54 55,52 Q74,54 76,67" fill="none" stroke="#00CCFF" stroke-width="1" opacity=".3" stroke-dasharray="3,3"/>
+        <circle cx="55" cy="88" r="6" fill="#00CCFF" opacity=".8"/><circle cx="55" cy="88" r="3" fill="white"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Assistente de Voz</div>
+        <div class="pcard-name">Alexa Echo Pop Amazon</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(8.430)</span></div>
+        <div class="pcard-desc">Design compacto. Som frontal nítido. Alexa integrada. Ideal para quartos. Bivolt.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$769,90</span><span class="p-new">R$ 606<small>,40</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('echopop')">Ver mais</button><button class="btn-buy" onclick="addToCart('Alexa Echo Pop',606.40,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Echo Show 5 -->
+    <div class="pcard reveal">
+      <div class="pcard-img" onclick="openProductPage('echoshow5')" title="Ver detalhes">
+        <svg width="120" height="100" viewBox="0 0 120 100"><defs><linearGradient id="g4a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient><linearGradient id="g4b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0E6FE8"/><stop offset="100%" stop-color="#00CCFF"/></linearGradient></defs>
+        <rect x="8" y="14" width="86" height="58" rx="4" fill="url(#g4a)" stroke="#243B60" stroke-width="1.5"/>
+        <rect x="11" y="17" width="80" height="52" rx="3" fill="url(#g4b)" opacity=".2"/>
+        <rect x="14" y="20" width="74" height="46" rx="2" fill="#020408" opacity=".75"/>
+        <text x="51" y="46" text-anchor="middle" fill="white" font-size="20" opacity=".65">⌂</text>
+        <text x="51" y="58" text-anchor="middle" fill="rgba(0,204,255,.7)" font-size="7" font-family="sans-serif">alexa</text>
+        <rect x="94" y="28" width="14" height="32" rx="3" fill="#0D1628" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="101" cy="40" r="5" fill="#00CCFF" opacity=".6"/>
+        <rect x="22" y="72" width="60" height="8" rx="2" fill="#060B14" stroke="#1C2E4A" stroke-width="1"/>
+        <rect x="48" y="80" width="8" height="10" rx="2" fill="#0A1120"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Assistente de Voz</div>
+        <div class="pcard-name">Alexa Echo Show 5 — Tela 5,5"</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(6.120)</span></div>
+        <div class="pcard-desc">Tela colorida 5,5". Câmera 2 MP. Controle visual da casa. Chamadas em vídeo.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$1.299,00</span><span class="p-new">R$ 978<small>,60</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('echoshow5')">Ver mais</button><button class="btn-buy" onclick="addToCart('Alexa Echo Show 5',978.60,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Echo Show 8 -->
+    <div class="pcard reveal">
+      <span class="pcard-badge badge-new">✨ Premium</span>
+      <div class="pcard-img" onclick="openProductPage('echoshow8')" title="Ver detalhes">
+        <svg width="130" height="95" viewBox="0 0 130 95"><defs><linearGradient id="g5a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient><linearGradient id="g5b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2589FF"/><stop offset="100%" stop-color="#00CCFF"/></linearGradient></defs>
+        <rect x="4" y="8" width="104" height="65" rx="4" fill="url(#g5a)" stroke="#243B60" stroke-width="1.5"/>
+        <rect x="7" y="11" width="98" height="59" rx="3" fill="url(#g5b)" opacity=".18"/>
+        <rect x="10" y="14" width="92" height="53" rx="2" fill="#020408" opacity=".75"/>
+        <text x="56" y="43" text-anchor="middle" fill="white" font-size="22" opacity=".65">⌂</text>
+        <text x="56" y="57" text-anchor="middle" fill="rgba(0,204,255,.7)" font-size="8" font-family="sans-serif">alexa</text>
+        <rect x="108" y="22" width="15" height="36" rx="3" fill="#0D1628" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="115" cy="36" r="6" fill="#00CCFF" opacity=".6"/>
+        <rect x="18" y="73" width="76" height="8" rx="2" fill="#060B14" stroke="#1C2E4A" stroke-width="1"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Assistente de Voz</div>
+        <div class="pcard-name">Alexa Echo Show 8 — Tela 8" HD</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(4.890)</span></div>
+        <div class="pcard-desc">Tela HD 8". Câmera 13 MP. Hub Zigbee + eero integrados. Som estéreo Dolby.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$3.199,00</span><span class="p-new">R$ 2.518<small>,60</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('echoshow8')">Ver mais</button><button class="btn-buy" onclick="addToCart('Alexa Echo Show 8',2518.60,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Tomada -->
     <div class="pcard reveal">
       <span class="pcard-badge badge-fire">🔥 Custo-benefício</span>
-      <div class="pcard-img" onclick="openProductPage('sensor')" title="Ver detalhes">
-        <svg width="95" height="115" viewBox="0 0 95 115"><defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#152240"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
-        <rect x="18" y="25" width="34" height="48" rx="6" fill="url(#g4)" stroke="#243B60" stroke-width="1.5"/><circle cx="35" cy="34" r="5" fill="#00CCFF" opacity=".8"/><circle cx="35" cy="34" r="2.5" fill="#00FFD0"/><rect x="55" y="36" width="22" height="29" rx="5" fill="#0D1628" stroke="#243B60" stroke-width="1"/><line x1="50" y1="44" x2="56" y2="44" stroke="#00CCFF" stroke-width="1" stroke-dasharray="2,2" opacity=".7"/><line x1="50" y1="51" x2="56" y2="51" stroke="#00CCFF" stroke-width="1" stroke-dasharray="2,2" opacity=".5"/><line x1="50" y1="58" x2="56" y2="58" stroke="#00CCFF" stroke-width="1" stroke-dasharray="2,2" opacity=".3"/><text x="35" y="63" text-anchor="middle" fill="rgba(37,137,255,.45)" font-size="6.5" font-family="monospace">SENSOR</text></svg>
+      <div class="pcard-img" onclick="openProductPage('tomada')" title="Ver detalhes">
+        <svg width="100" height="120" viewBox="0 0 100 120"><defs><linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#5AABFF"/><stop offset="100%" stop-color="#0E6FE8"/></linearGradient></defs>
+        <rect x="22" y="18" width="56" height="68" rx="10" fill="url(#g6)" opacity=".9"/><rect x="24" y="20" width="52" height="64" rx="9" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1"/><rect x="31" y="34" width="14" height="20" rx="4" fill="rgba(0,0,0,.45)"/><rect x="55" y="34" width="14" height="20" rx="4" fill="rgba(0,0,0,.45)"/><circle cx="50" cy="68" r="7" fill="rgba(0,0,0,.35)"/><rect x="47" y="86" width="6" height="16" rx="3" fill="#0D1628"/><circle cx="50" cy="24" r="4" fill="#00FFD0" opacity=".9"/><circle cx="50" cy="24" r="2" fill="white"/><text x="50" y="60" text-anchor="middle" fill="rgba(255,255,255,.35)" font-size="8" font-family="monospace">Wi-Fi</text></svg>
       </div>
       <div class="pcard-body">
-        <div class="pcard-cat">Segurança Smart</div>
-        <div class="pcard-name">Sensor Abertura Intelbras MSA 1001</div>
-        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(632)</span></div>
-        <div class="pcard-desc">Protocolo Zigbee. Bateria +12 meses. Portas e janelas. App IzySmart.</div>
+        <div class="pcard-cat">Tomada Inteligente</div>
+        <div class="pcard-name">Tomada Inteligente Wi-Fi Alexa</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(2.140)</span></div>
+        <div class="pcard-desc">Liga/desliga por voz Alexa ou app. Monitor de energia. Bivolt. Sem hub.</div>
         <div class="pcard-footer">
-          <div class="pcard-prices"><span class="p-old">R$ 120,00</span><span class="p-new">R$ 82<small>,00</small></span></div>
-          <div style="display:flex;gap:8px;">
-            <button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('sensor')">Ver mais</button>
-            <button class="btn-buy" onclick="addToCart('Sensor Intelbras MSA',82,event)">🛒 Comprar</button>
-          </div>
+          <div class="pcard-prices"><span class="p-old">R$99,90</span><span class="p-new">R$ 66<small>,58</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('tomada')">Ver mais</button><button class="btn-buy" onclick="addToCart('Tomada Inteligente Wi-Fi',66.58,event)">🛒 Comprar</button></div>
         </div>
       </div>
     </div>
 
+    <!-- 7. Fita LED -->
     <div class="pcard reveal">
-      <div class="pcard-img" onclick="openProductPage('interruptor')" title="Ver detalhes">
-        <svg width="90" height="120" viewBox="0 0 90 120"><defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
-        <rect x="15" y="12" width="60" height="88" rx="8" fill="url(#g5)" stroke="#243B60" stroke-width="1.5"/><circle cx="45" cy="44" r="18" fill="none" stroke="#243B60" stroke-width="1.5"/><circle cx="45" cy="44" r="11" fill="#0E6FE8" opacity=".28"/><circle cx="45" cy="44" r="5" fill="#2589FF" opacity=".85"/><circle cx="45" cy="44" r="2" fill="white"/><circle cx="45" cy="82" r="11" fill="none" stroke="#243B60" stroke-width="1.5"/><circle cx="45" cy="82" r="6" fill="#00CCFF" opacity=".22"/><circle cx="45" cy="82" r="2.5" fill="#00CCFF" opacity=".75"/><rect x="27" y="15" width="36" height="2" rx="1" fill="#0E6FE8" opacity=".55"/></svg>
+      <span class="pcard-badge badge-new">✨ Destaque</span>
+      <div class="pcard-img" onclick="openProductPage('fitaled')" title="Ver detalhes">
+        <svg width="120" height="90" viewBox="0 0 120 90"><defs><linearGradient id="g7" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#FF4D2E"/><stop offset="33%" stop-color="#FFB800"/><stop offset="66%" stop-color="#00FFD0"/><stop offset="100%" stop-color="#2589FF"/></linearGradient></defs>
+        <rect x="8" y="36" width="104" height="14" rx="4" fill="#0D1628" stroke="#243B60" stroke-width="1.5"/>
+        <rect x="8" y="36" width="104" height="5" rx="3" fill="url(#g7)" opacity=".9"/>
+        <circle cx="22" cy="43" r="5" fill="#FF4D2E" opacity=".9"/><circle cx="38" cy="43" r="5" fill="#FFB800" opacity=".9"/><circle cx="54" cy="43" r="5" fill="#00FFD0" opacity=".9"/><circle cx="70" cy="43" r="5" fill="#2589FF" opacity=".9"/><circle cx="86" cy="43" r="5" fill="#CC00FF" opacity=".9"/><circle cx="102" cy="43" r="5" fill="#FF4D2E" opacity=".9"/>
+        <ellipse cx="60" cy="43" rx="56" ry="18" fill="none" stroke="rgba(0,204,255,.08)" stroke-width="8"/>
+        <rect x="55" y="54" width="10" height="12" rx="2" fill="#0D1628" stroke="#243B60" stroke-width="1"/>
+        <text x="60" y="77" text-anchor="middle" fill="var(--mist)" font-size="7" font-family="sans-serif">Wi-Fi ◉ RGB ◉ Alexa</text></svg>
       </div>
       <div class="pcard-body">
-        <div class="pcard-cat">Interruptor Inteligente</div>
-        <div class="pcard-name">Interruptor Touch Intelbras EWS 1002</div>
-        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star dim">★</span><span class="rcount">(318)</span></div>
-        <div class="pcard-desc">Vidro temperado. App IzySmart. Alexa &amp; Google. Padrão 4×2 brasileiro.</div>
+        <div class="pcard-cat">Iluminação Smart</div>
+        <div class="pcard-name">Fita LED Wi-Fi RGB Inteligente</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(3.680)</span></div>
+        <div class="pcard-desc">Fita LED RGB colorida. 5m de comprimento. Alexa/Google. App TuyaSmart.</div>
         <div class="pcard-footer">
-          <div class="pcard-prices"><span class="p-old">R$ 220,00</span><span class="p-new">R$ 169<small>,00</small></span></div>
-          <div style="display:flex;gap:8px;">
-            <button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('interruptor')">Ver mais</button>
-            <button class="btn-buy" onclick="addToCart('Interruptor Touch EWS',169,event)">🛒 Comprar</button>
-          </div>
+          <div class="pcard-prices"><span class="p-old">R$199,90</span><span class="p-new">R$ 145<small>,19</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('fitaled')">Ver mais</button><button class="btn-buy" onclick="addToCart('Fita LED Wi-Fi RGB',145.19,event)">🛒 Comprar</button></div>
         </div>
       </div>
     </div>
 
+    <!-- 8. Aspirador Robô -->
     <div class="pcard reveal">
-      <span class="pcard-badge badge-new">⭐ CES 2026</span>
+      <span class="pcard-badge badge-fire">🔥 Top vendas</span>
+      <div class="pcard-img" onclick="openProductPage('aspirador')" title="Ver detalhes">
+        <svg width="120" height="110" viewBox="0 0 120 110"><defs><linearGradient id="g8" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E2D45"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <circle cx="60" cy="58" r="40" fill="url(#g8)" stroke="#243B60" stroke-width="1.5"/>
+        <circle cx="60" cy="58" r="34" fill="none" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="60" cy="58" r="14" fill="#0A1120" stroke="#243B60" stroke-width="1"/>
+        <circle cx="60" cy="58" r="5" fill="#0E6FE8" opacity=".8"/><circle cx="60" cy="58" r="2.5" fill="#00CCFF"/>
+        <circle cx="60" cy="24" r="4" fill="#00FFD0" opacity=".9"/><circle cx="60" cy="24" r="2" fill="white"/>
+        <path d="M36,58 Q36,34 60,34 Q84,34 84,58" fill="none" stroke="#0E6FE8" stroke-width="1.5" opacity=".4" stroke-dasharray="4,3"/>
+        <circle cx="90" cy="48" r="5" fill="#0A1120" stroke="#243B60" stroke-width="1"/><circle cx="90" cy="48" r="2.5" fill="#0E6FE8" opacity=".7"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Robô de Limpeza</div>
+        <div class="pcard-name">Aspirador Robô Inteligente Wi-Fi</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(1.890)</span></div>
+        <div class="pcard-desc">Mapeamento laser LiDAR. Alexa integrada. Aspirador + mop. Auto-recarga.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$1.149,00</span><span class="p-new">R$ 839<small>,99</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('aspirador')">Ver mais</button><button class="btn-buy" onclick="addToCart('Aspirador Robô Inteligente',839.99,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Fechadura -->
+    <div class="pcard reveal">
+      <span class="pcard-badge badge-new">🔐 Biométrica</span>
       <div class="pcard-img" onclick="openProductPage('fechadura')" title="Ver detalhes">
-        <svg width="95" height="120" viewBox="0 0 95 120"><defs><linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1C2E4A"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
-        <rect x="16" y="15" width="63" height="88" rx="8" fill="url(#g6)" stroke="#1C2E4A" stroke-width="1.5"/><rect x="25" y="30" width="45" height="44" rx="6" fill="rgba(0,0,0,.3)" stroke="#1C2E4A" stroke-width="1"/>
+        <svg width="95" height="120" viewBox="0 0 95 120"><defs><linearGradient id="g9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1C2E4A"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <rect x="16" y="15" width="63" height="88" rx="8" fill="url(#g9)" stroke="#1C2E4A" stroke-width="1.5"/>
+        <rect x="25" y="30" width="45" height="44" rx="6" fill="rgba(0,0,0,.3)" stroke="#1C2E4A" stroke-width="1"/>
         <circle cx="38" cy="44" r="3.5" fill="#0E6FE8" opacity=".7"/><circle cx="47.5" cy="44" r="3.5" fill="#0E6FE8" opacity=".7"/><circle cx="57" cy="44" r="3.5" fill="#0E6FE8" opacity=".7"/>
         <circle cx="38" cy="54" r="3.5" fill="#0E6FE8" opacity=".7"/><circle cx="47.5" cy="54" r="3.5" fill="#0E6FE8" opacity=".7"/><circle cx="57" cy="54" r="3.5" fill="#0E6FE8" opacity=".7"/>
         <circle cx="38" cy="64" r="3.5" fill="#0E6FE8" opacity=".7"/><circle cx="47.5" cy="64" r="4" fill="#00CCFF" opacity=".9"/><circle cx="57" cy="64" r="3.5" fill="#0E6FE8" opacity=".7"/>
@@ -742,15 +822,223 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
       </div>
       <div class="pcard-body">
         <div class="pcard-cat">Fechadura Smart</div>
-        <div class="pcard-name">Aqara Smart Lock U400</div>
-        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(204)</span></div>
-        <div class="pcard-desc">Melhor da CES 2026. Protocolo Matter. Biometria + app + chave física.</div>
+        <div class="pcard-name">Fechadura Biométrica Inteligente</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(892)</span></div>
+        <div class="pcard-desc">Biometria + senha + chave + app. Alexa integrada. Abertura em 0,3s. Alarme.</div>
         <div class="pcard-footer">
-          <div class="pcard-prices"><span class="p-old">R$ 1.890,00</span><span class="p-new">R$ 1.590<small>,00</small></span></div>
-          <div style="display:flex;gap:8px;">
-            <button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('fechadura')">Ver mais</button>
-            <button class="btn-buy" onclick="addToCart('Aqara Smart Lock U400',1590,event)">🛒 Comprar</button>
-          </div>
+          <div class="pcard-prices"><span class="p-old">R$599,00</span><span class="p-new">R$ 415<small>,98</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('fechadura')">Ver mais</button><button class="btn-buy" onclick="addToCart('Fechadura Biométrica',415.98,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Câmera Doméstica -->
+    <div class="pcard reveal">
+      <span class="pcard-badge badge-fire">🔥 Vigilância 24h</span>
+      <div class="pcard-img" onclick="openProductPage('camdomes')" title="Ver detalhes">
+        <svg width="100" height="120" viewBox="0 0 100 120"><defs><linearGradient id="g10" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#152240"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <ellipse cx="50" cy="56" rx="28" ry="30" fill="url(#g10)" stroke="#243B60" stroke-width="1.5"/>
+        <circle cx="50" cy="52" r="18" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="50" cy="52" r="12" fill="#060B14"/><circle cx="50" cy="52" r="8" fill="#0E6FE8" opacity=".2"/>
+        <circle cx="50" cy="52" r="5" fill="#0E6FE8" opacity=".6"/><circle cx="50" cy="52" r="2.5" fill="white" opacity=".9"/>
+        <circle cx="50" cy="30" r="3" fill="#00FFD0" opacity=".9"/><circle cx="50" cy="30" r="1.5" fill="white"/>
+        <rect x="42" y="86" width="16" height="6" rx="2" fill="#0A1120" stroke="#243B60" stroke-width="1"/>
+        <rect x="46" y="92" width="8" height="12" rx="2" fill="#060B14"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Câmera Smart</div>
+        <div class="pcard-name">Câmera Doméstica Wi-Fi 360°</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(4.210)</span></div>
+        <div class="pcard-desc">Visão 360°. Infravermelho noturno. Detecção de movimento. App TuyaSmart.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$169,90</span><span class="p-new">R$ 107<small>,82</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('camdomes')">Ver mais</button><button class="btn-buy" onclick="addToCart('Câmera Doméstica Wi-Fi',107.82,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Câmera de Segurança -->
+    <div class="pcard reveal">
+      <div class="pcard-img" onclick="openProductPage('camseg')" title="Ver detalhes">
+        <svg width="110" height="110" viewBox="0 0 110 110"><defs><linearGradient id="g11" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <rect x="18" y="35" width="55" height="38" rx="8" fill="url(#g11)" stroke="#243B60" stroke-width="1.5"/>
+        <circle cx="52" cy="54" r="14" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="52" cy="54" r="9" fill="#060B14"/><circle cx="52" cy="54" r="5" fill="#0E6FE8" opacity=".4"/>
+        <circle cx="52" cy="54" r="2.5" fill="#00CCFF" opacity=".9"/>
+        <rect x="73" y="46" width="20" height="14" rx="3" fill="#0D1628" stroke="#243B60" stroke-width="1"/>
+        <circle cx="83" cy="53" r="4" fill="#00FFD0" opacity=".7"/>
+        <rect x="26" y="43" width="6" height="6" rx="1" fill="#00CCFF" opacity=".4"/>
+        <rect x="26" y="53" width="6" height="6" rx="1" fill="#00CCFF" opacity=".4"/>
+        <rect x="38" y="80" width="20" height="12" rx="3" fill="#060B14" stroke="#1C2E4A" stroke-width="1"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Câmera Smart</div>
+        <div class="pcard-name">Câmera Segurança Externa Wi-Fi</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(2.760)</span></div>
+        <div class="pcard-desc">IP67 à prova d'água. Rastreio automático. Full HD 1080p. Visão noturna.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$329,00</span><span class="p-new">R$ 231<small>,84</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('camseg')">Ver mais</button><button class="btn-buy" onclick="addToCart('Câmera Segurança Externa',231.84,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Câmera Espiã -->
+    <div class="pcard reveal">
+      <span class="pcard-badge badge-fire">🔥 Custo-benefício</span>
+      <div class="pcard-img" onclick="openProductPage('camespia')" title="Ver detalhes">
+        <svg width="90" height="120" viewBox="0 0 90 120"><defs><linearGradient id="g12" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1C2E4A"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <rect x="28" y="18" width="34" height="62" rx="6" fill="url(#g12)" stroke="#243B60" stroke-width="1.5"/>
+        <circle cx="45" cy="40" r="12" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="45" cy="40" r="8" fill="#060B14"/><circle cx="45" cy="40" r="4" fill="#0E6FE8" opacity=".5"/>
+        <circle cx="45" cy="40" r="2" fill="white" opacity=".9"/>
+        <circle cx="45" cy="23" r="2.5" fill="#FF4D2E" opacity=".8"/>
+        <rect x="32" y="60" width="26" height="3" rx="1.5" fill="#1C2E4A"/>
+        <rect x="32" y="66" width="16" height="3" rx="1.5" fill="#1C2E4A"/>
+        <circle cx="45" cy="90" r="5" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="45" cy="90" r="2.5" fill="#0E6FE8" opacity=".6"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Câmera Smart</div>
+        <div class="pcard-name">Câmera Espiã Wi-Fi Visão Noturna</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(1.430)</span></div>
+        <div class="pcard-desc">Ultra compacta. Detecção de movimento. Visão noturna. Gravação em loop SD.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$79,90</span><span class="p-new">R$ 47<small>,16</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('camespia')">Ver mais</button><button class="btn-buy" onclick="addToCart('Câmera Espiã Wi-Fi',47.16,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Cortina Motorizada -->
+    <div class="pcard reveal">
+      <span class="pcard-badge badge-new">✨ Premium</span>
+      <div class="pcard-img" onclick="openProductPage('cortina')" title="Ver detalhes">
+        <svg width="120" height="95" viewBox="0 0 120 95"><defs><linearGradient id="g13" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <rect x="10" y="10" width="100" height="8" rx="4" fill="#243B60" stroke="#1C2E4A" stroke-width="1"/>
+        <rect x="20" y="18" width="35" height="55" rx="3" fill="url(#g13)" stroke="#1C2E4A" stroke-width="1" opacity=".9"/>
+        <rect x="65" y="18" width="35" height="55" rx="3" fill="url(#g13)" stroke="#1C2E4A" stroke-width="1" opacity=".9"/>
+        <path d="M20,18 Q37,28 37,73" fill="none" stroke="rgba(90,171,255,.35)" stroke-width="1.5"/>
+        <path d="M55,18 Q38,28 38,73" fill="none" stroke="rgba(90,171,255,.35)" stroke-width="1.5"/>
+        <path d="M65,18 Q82,28 82,73" fill="none" stroke="rgba(90,171,255,.35)" stroke-width="1.5"/>
+        <path d="M100,18 Q83,28 83,73" fill="none" stroke="rgba(90,171,255,.35)" stroke-width="1.5"/>
+        <rect x="52" y="6" width="16" height="10" rx="3" fill="#0E6FE8" opacity=".8"/>
+        <circle cx="60" cy="11" r="3" fill="#00CCFF" opacity=".7"/>
+        <text x="60" y="90" text-anchor="middle" fill="var(--mist)" font-size="7" font-family="sans-serif">Motor ◉ Wi-Fi ◉ Alexa</text></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Automação Smart</div>
+        <div class="pcard-name">Cortina Motorizada Alexa Wi-Fi</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(620)</span></div>
+        <div class="pcard-desc">Motor silencioso. Controle por voz Alexa/Google. App. Abertura/fechamento automático.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$1.399,00</span><span class="p-new">R$ 1.010<small>,66</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('cortina')">Ver mais</button><button class="btn-buy" onclick="addToCart('Cortina Motorizada Alexa',1010.66,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14. Persiana Elétrica -->
+    <div class="pcard reveal">
+      <div class="pcard-img" onclick="openProductPage('persiana')" title="Ver detalhes">
+        <svg width="120" height="95" viewBox="0 0 120 95"><defs><linearGradient id="g14" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <rect x="10" y="8" width="100" height="6" rx="3" fill="#243B60" stroke="#1C2E4A" stroke-width="1"/>
+        <rect x="12" y="18" width="96" height="5" rx="2" fill="url(#g14)" stroke="#1C2E4A" stroke-width="1"/>
+        <rect x="12" y="28" width="96" height="5" rx="2" fill="url(#g14)" stroke="#1C2E4A" stroke-width="1" opacity=".9"/>
+        <rect x="12" y="38" width="96" height="5" rx="2" fill="url(#g14)" stroke="#1C2E4A" stroke-width="1" opacity=".8"/>
+        <rect x="12" y="48" width="96" height="5" rx="2" fill="url(#g14)" stroke="#1C2E4A" stroke-width="1" opacity=".7"/>
+        <rect x="12" y="58" width="96" height="5" rx="2" fill="url(#g14)" stroke="#1C2E4A" stroke-width="1" opacity=".6"/>
+        <rect x="12" y="68" width="96" height="5" rx="2" fill="url(#g14)" stroke="#1C2E4A" stroke-width="1" opacity=".5"/>
+        <rect x="104" y="6" width="12" height="20" rx="3" fill="#0E6FE8" opacity=".7"/>
+        <circle cx="110" cy="15" r="3.5" fill="#00FFD0" opacity=".9"/>
+        <text x="60" y="90" text-anchor="middle" fill="var(--mist)" font-size="7" font-family="sans-serif">Elétrica ◉ App ◉ Wi-Fi</text></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Automação Smart</div>
+        <div class="pcard-name">Persiana Elétrica Wi-Fi Inteligente</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(480)</span></div>
+        <div class="pcard-desc">Persianas motorizadas. App + controle. Alexa/Google. Fácil instalação sem obra.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$219,00</span><span class="p-new">R$ 138<small>,96</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('persiana')">Ver mais</button><button class="btn-buy" onclick="addToCart('Persiana Elétrica Wi-Fi',138.96,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15. Luminária de Teto -->
+    <div class="pcard reveal">
+      <span class="pcard-badge badge-new">✨ Novo</span>
+      <div class="pcard-img" onclick="openProductPage('luminaria')" title="Ver detalhes">
+        <svg width="120" height="90" viewBox="0 0 120 90"><defs><radialGradient id="g15a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00CCFF" stop-opacity=".3"/><stop offset="100%" stop-color="transparent"/></radialGradient><linearGradient id="g15b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#152240"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <circle cx="60" cy="48" r="42" fill="url(#g15a)"/>
+        <circle cx="60" cy="48" r="34" fill="url(#g15b)" stroke="#243B60" stroke-width="1.5"/>
+        <circle cx="60" cy="48" r="26" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="60" cy="48" r="18" fill="#00CCFF" opacity=".1"/>
+        <circle cx="60" cy="48" r="10" fill="#00CCFF" opacity=".22"/>
+        <circle cx="60" cy="48" r="4" fill="#00FFD0" opacity=".9"/>
+        <rect x="55" y="4" width="10" height="12" rx="2" fill="#060B14" stroke="#1C2E4A" stroke-width="1"/>
+        <text x="60" y="83" text-anchor="middle" fill="var(--mist)" font-size="7" font-family="sans-serif">Plafon ◉ Wi-Fi ◉ RGB</text></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Iluminação Smart</div>
+        <div class="pcard-name">Luminária de Teto Wi-Fi RGB</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(1.140)</span></div>
+        <div class="pcard-desc">Plafon LED colorido. Controle de brilho e cor. App + Alexa. Bivolt. Plug &amp; Play.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$249,00</span><span class="p-new">R$ 172<small>,62</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('luminaria')">Ver mais</button><button class="btn-buy" onclick="addToCart('Luminária de Teto Wi-Fi',172.62,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16. Controle Remoto Universal -->
+    <div class="pcard reveal">
+      <span class="pcard-badge badge-fire">🔥 Custo-benefício</span>
+      <div class="pcard-img" onclick="openProductPage('controle')" title="Ver detalhes">
+        <svg width="80" height="130" viewBox="0 0 80 130"><defs><linearGradient id="g16" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#152240"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <rect x="18" y="8" width="44" height="112" rx="12" fill="url(#g16)" stroke="#243B60" stroke-width="1.5"/>
+        <circle cx="40" cy="34" r="11" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="40" cy="34" r="7" fill="#0E6FE8" opacity=".3"/><circle cx="40" cy="34" r="3.5" fill="#0E6FE8" opacity=".8"/>
+        <circle cx="40" cy="20" r="3.5" fill="#00FFD0" opacity=".8"/><circle cx="40" cy="20" r="1.5" fill="white"/>
+        <rect x="27" y="52" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="44" y="52" width="9" height="9" rx="3" fill="#1C2E4A"/>
+        <rect x="27" y="66" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="44" y="66" width="9" height="9" rx="3" fill="#1C2E4A"/>
+        <rect x="27" y="80" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="44" y="80" width="9" height="9" rx="3" fill="#1C2E4A"/>
+        <rect x="27" y="94" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="44" y="94" width="9" height="9" rx="3" fill="#1C2E4A"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Controle Smart</div>
+        <div class="pcard-name">Controle Remoto Universal Wi-Fi</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(3.290)</span></div>
+        <div class="pcard-desc">Controla TV, ar-cond., DVD, som. IR universal. App + Alexa. Muito compacto.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$119,90</span><span class="p-new">R$ 75<small>,51</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('controle')">Ver mais</button><button class="btn-buy" onclick="addToCart('Controle Remoto Universal',75.51,event)">🛒 Comprar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17. Alimentador Automático -->
+    <div class="pcard reveal">
+      <span class="pcard-badge badge-new">🐾 Pets</span>
+      <div class="pcard-img" onclick="openProductPage('alimentador')" title="Ver detalhes">
+        <svg width="110" height="110" viewBox="0 0 110 110"><defs><linearGradient id="g17" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E2D45"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs>
+        <rect x="25" y="12" width="60" height="70" rx="8" fill="url(#g17)" stroke="#243B60" stroke-width="1.5"/>
+        <rect x="30" y="20" width="50" height="34" rx="5" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/>
+        <circle cx="42" cy="34" r="5" fill="#0E6FE8" opacity=".6"/><circle cx="55" cy="34" r="5" fill="#00CCFF" opacity=".6"/><circle cx="68" cy="34" r="5" fill="#00FFD0" opacity=".6"/>
+        <text x="55" y="47" text-anchor="middle" fill="rgba(255,255,255,.4)" font-size="7" font-family="sans-serif">AUTO FEED</text>
+        <rect x="30" y="58" width="50" height="8" rx="3" fill="#1C2E4A"/>
+        <ellipse cx="55" cy="84" rx="32" ry="10" fill="#0A1120" stroke="#243B60" stroke-width="1.5"/>
+        <ellipse cx="55" cy="84" rx="22" ry="7" fill="#060B14"/>
+        <circle cx="45" cy="83" r="3" fill="#FFB800" opacity=".7"/><circle cx="55" cy="83" r="3" fill="#FFB800" opacity=".7"/><circle cx="65" cy="83" r="3" fill="#FFB800" opacity=".7"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">Pet Smart</div>
+        <div class="pcard-name">Alimentador Automático Pet Wi-Fi</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="rcount">(2.010)</span></div>
+        <div class="pcard-desc">Alimenta seu pet automaticamente. Horário programado. Câmera + áudio + app.</div>
+        <div class="pcard-footer">
+          <div class="pcard-prices"><span class="p-old">R$699,00</span><span class="p-new">R$ 479<small>,84</small></span></div>
+          <div style="display:flex;gap:8px;"><button class="btn-buy" style="background:transparent;border:1px solid var(--rim2);color:var(--fog);" onclick="openProductPage('alimentador')">Ver mais</button><button class="btn-buy" onclick="addToCart('Alimentador Automático Pet',479.84,event)">🛒 Comprar</button></div>
         </div>
       </div>
     </div>
@@ -1007,11 +1295,11 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
       <div class="pp-info">
         <div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Assistentes de Voz</a><span>›</span> Echo Dot 5ª Gen</div>
         <div class="pp-cat-label">Assistente de Voz</div>
-        <div class="pp-product-name">Amazon Echo Dot 5ª Geração</div>
+        <div class="pp-product-name">Alexa Echo Dot Amazon</div>
         <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.9</span><span class="pp-rating-count">15.290 avaliações</span></div>
-        <div class="pp-badge-row"><span class="pp-badge" style="background:rgba(255,184,0,.1);border:1px solid rgba(255,184,0,.3);color:var(--gold);">⭐ Mais avaliado</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">🎙️ Alexa Built-in</span></div>
-        <div class="pp-price-block"><span class="pp-price-old">De R$ 549,00</span><span class="pp-price-now"><sup>R$</sup> 459<sub>,00</sub></span><span class="pp-discount-tag">-16% OFF</span><span class="pp-installments">ou <b>6x R$ 76,50</b> sem juros no cartão</span></div>
-        <div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Echo Dot 5ª Geração',459,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+        <div class="pp-badge-row"><span class="pp-badge badge-new">⭐ Amazon</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">🎙️ Alexa Built-in</span></div>
+        <div class="pp-price-block"><span class="pp-price-old">De R$ 949,90</span><span class="pp-price-now"><sup>R$</sup> 734<sub>,40</sub></span><span class="pp-discount-tag">-23% OFF</span><span class="pp-installments">ou <b>6x R$ 122,40</b> sem juros no cartão</span></div>
+        <div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Alexa Echo Dot',734.40,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
         <div class="pp-tab-nav">
           <button class="pp-tab-btn active" onclick="switchTab(this,'tab-ed-spec')">Especificações</button>
           <button class="pp-tab-btn" onclick="switchTab(this,'tab-ed-cons')">Consumo</button>
@@ -1262,13 +1550,13 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
         <div class="pp-thumbs"><div class="pp-thumb active">🔐</div><div class="pp-thumb">👆</div><div class="pp-thumb">📱</div><div class="pp-thumb">🗝️</div></div>
       </div>
       <div class="pp-info">
-        <div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Fechaduras Smart</a><span>›</span> Aqara U400</div>
+        <div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Fechaduras Smart</a><span>›</span> Biométrica</div>
         <div class="pp-cat-label">Fechadura Smart</div>
-        <div class="pp-product-name">Aqara Smart Lock U400</div>
-        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">204 avaliações</span></div>
-        <div class="pp-badge-row"><span class="pp-badge badge-new">⭐ CES 2026</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">Matter</span><span class="pp-badge" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);color:var(--gold);">👆 Biometria</span></div>
-        <div class="pp-price-block"><span class="pp-price-old">De R$ 1.890,00</span><span class="pp-price-now"><sup>R$</sup> 1.590<sub>,00</sub></span><span class="pp-discount-tag">-16% OFF</span><span class="pp-installments">ou <b>12x R$ 132,50</b> sem juros no cartão</span></div>
-        <div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Aqara Smart Lock U400',1590,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+        <div class="pp-product-name">Fechadura Biométrica Inteligente</div>
+        <div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">892 avaliações</span></div>
+        <div class="pp-badge-row"><span class="pp-badge badge-new">🔐 Biométrica</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">✓ Alexa</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">🔑 4 em 1</span></div>
+        <div class="pp-price-block"><span class="pp-price-old">De R$ 599,00</span><span class="pp-price-now"><sup>R$</sup> 415<sub>,98</sub></span><span class="pp-discount-tag">-31% OFF</span><span class="pp-installments">ou <b>6x R$ 69,33</b> sem juros no cartão</span></div>
+        <div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Fechadura Biométrica',415.98,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
         <div class="pp-tab-nav">
           <button class="pp-tab-btn active" onclick="switchTab(this,'tab-fe-spec')">Especificações</button>
           <button class="pp-tab-btn" onclick="switchTab(this,'tab-fe-cons')">Consumo</button>
@@ -1334,6 +1622,300 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
       </div>
     </div>
   </div>
+</div>
+
+<!-- TOMADA -->
+<div class="product-page" id="page-tomada">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="200" height="230" viewBox="0 0 100 120"><defs><linearGradient id="ptg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#5AABFF"/><stop offset="100%" stop-color="#0E6FE8"/></linearGradient></defs><rect x="12" y="10" width="76" height="88" rx="14" fill="url(#ptg1)" opacity=".9"/><rect x="14" y="12" width="72" height="84" rx="13" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><rect x="22" y="30" width="18" height="25" rx="5" fill="rgba(0,0,0,.5)"/><rect x="60" y="30" width="18" height="25" rx="5" fill="rgba(0,0,0,.5)"/><circle cx="50" cy="75" r="9" fill="rgba(0,0,0,.4)"/><circle cx="50" cy="20" r="6" fill="#00FFD0" opacity=".95"/><circle cx="50" cy="20" r="3" fill="white"/><text x="50" y="67" text-anchor="middle" fill="rgba(255,255,255,.4)" font-size="10" font-family="monospace">Wi-Fi</text><rect x="46" y="100" width="8" height="20" rx="4" fill="#0D1628"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">🔌</div><div class="pp-thumb">📊</div><div class="pp-thumb">📱</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Tomadas</a><span>›</span> Tomada Wi-Fi</div>
+<div class="pp-cat-label">Tomada Inteligente</div>
+<div class="pp-product-name">Tomada Inteligente Wi-Fi Alexa</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">2.140 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-fire">🔥 Custo-benefício</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">✓ Alexa</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">⚡ Monitor Energia</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 99,90</span><span class="pp-price-now"><sup>R$</sup> 66<sub>,58</sub></span><span class="pp-discount-tag">-33% OFF</span><span class="pp-installments">ou <b>3x R$ 22,19</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Tomada Inteligente Wi-Fi',66.58,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-to-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-to-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-to-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-to-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Corrente máx.</span><span class="pp-spec-val">16A</span></div><div class="pp-spec-item"><span class="pp-spec-key">Potência máx.</span><span class="pp-spec-val">3.680W</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">Monitor energia</span><span class="pp-spec-val">Sim (kWh, R$)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">Bivolt 100–240V</span></div><div class="pp-spec-item"><span class="pp-spec-key">Padrão</span><span class="pp-spec-val">NBR 14136 (BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Compatibilidade</span><span class="pp-spec-val">Alexa, Google Home</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Hub necessário</span><span class="pp-spec-val">Não</span></div><div class="pp-spec-item"><span class="pp-spec-key">Certificação</span><span class="pp-spec-val">Anatel + Inmetro</span></div></div></div>
+<div class="pp-tab-panel" id="tab-to-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-tomada" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('tomada')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis para compras acima de R$ 299,00</p><div class="shipping-result" id="result-tomada"></div></div></div>
+<div class="pp-tab-panel" id="tab-to-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">2.140 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:87%"></div></div><span class="rbar-pct">87%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:10%"></div></div><span class="rbar-pct">10%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar">JP</div><div><div class="review-author">João P.</div><div class="review-date">12 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Funcionou na primeira tentativa, sem hub extra. Uso para controlar o ar-condicionado pela Alexa. O monitor de consumo é incrível!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#2E7D32,#4CAF50)">FS</div><div><div class="review-author">Fernanda S.</div><div class="review-date">08 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Comprei 3 para a casa. Liga e desliga pela Alexa perfeitamente. Vale muito pelo preço.</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- ECHO POP -->
+<div class="product-page" id="page-echopop">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="200" height="220" viewBox="0 0 110 115"><defs><radialGradient id="ptg2" cx="40%" cy="35%" r="65%"><stop offset="0%" stop-color="#243B60"/><stop offset="100%" stop-color="#060B14"/></radialGradient></defs><ellipse cx="55" cy="88" rx="36" ry="9" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/><path d="M19,88 Q19,40 55,38 Q91,40 91,88 Z" fill="url(#ptg2)" stroke="#1C2E4A" stroke-width="1.5"/><path d="M28,72 Q30,54 55,52 Q80,54 82,72" fill="none" stroke="#00CCFF" stroke-width="1" opacity=".5" stroke-dasharray="3,3"/><path d="M34,67 Q36,54 55,52 Q74,54 76,67" fill="none" stroke="#00CCFF" stroke-width="1" opacity=".3" stroke-dasharray="3,3"/><circle cx="55" cy="88" r="6" fill="#00CCFF" opacity=".8"/><circle cx="55" cy="88" r="3" fill="white"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">🔊</div><div class="pp-thumb">📱</div><div class="pp-thumb">🏠</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Assistentes de Voz</a><span>›</span> Echo Pop</div>
+<div class="pp-cat-label">Assistente de Voz</div>
+<div class="pp-product-name">Alexa Echo Pop Amazon</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.9</span><span class="pp-rating-count">8.430 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-new">✨ Novo</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">🎙️ Alexa</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">🔊 Som Frontal</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 769,90</span><span class="pp-price-now"><sup>R$</sup> 606<sub>,40</sub></span><span class="pp-discount-tag">-21% OFF</span><span class="pp-installments">ou <b>6x R$ 101,07</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Alexa Echo Pop',606.40,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-ep-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-ep-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-ep-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-ep-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Design</span><span class="pp-spec-val">Meia esfera</span></div><div class="pp-spec-item"><span class="pp-spec-key">Som</span><span class="pp-spec-val">1 driver frontal</span></div><div class="pp-spec-item"><span class="pp-spec-key">Microfones</span><span class="pp-spec-val">4 mics far-field</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi + Bluetooth</span></div><div class="pp-spec-item"><span class="pp-spec-key">Assistente</span><span class="pp-spec-val">Alexa</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">Bivolt 100–240V</span></div><div class="pp-spec-item"><span class="pp-spec-key">Compatibilidade</span><span class="pp-spec-val">Alexa, Matter</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">Amazon Alexa (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Ideal para</span><span class="pp-spec-val">Quartos e ambientes pequenos</span></div><div class="pp-spec-item"><span class="pp-spec-key">Cor</span><span class="pp-spec-val">Branco / Carbono</span></div></div></div>
+<div class="pp-tab-panel" id="tab-ep-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-echopop" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('echopop')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis para compras acima de R$ 299,00</p><div class="shipping-result" id="result-echopop"></div></div></div>
+<div class="pp-tab-panel" id="tab-ep-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.9</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">8.430 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:93%"></div></div><span class="rbar-pct">93%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:5%"></div></div><span class="rbar-pct">5%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#C62828,#F44336)">CM</div><div><div class="review-author">Carla M.</div><div class="review-date">22 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Perfeito para o quarto! O som é surpreendentemente bom para o tamanho. A Alexa entende tudo em português. Já pedi mais 2 unidades!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#1565C0,#42A5F5)">BR</div><div><div class="review-author">Bruno R.</div><div class="review-date">15 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Custo-benefício absurdo. Design bonito, som limpo, Alexa responsiva. Muito melhor do que esperava!</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- ECHO SHOW 5 -->
+<div class="product-page" id="page-echoshow5">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="220" height="190" viewBox="0 0 120 100"><defs><linearGradient id="ptg3a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient><linearGradient id="ptg3b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0E6FE8"/><stop offset="100%" stop-color="#00CCFF"/></linearGradient></defs><rect x="8" y="14" width="86" height="58" rx="4" fill="url(#ptg3a)" stroke="#243B60" stroke-width="1.5"/><rect x="11" y="17" width="80" height="52" rx="3" fill="url(#ptg3b)" opacity=".2"/><rect x="14" y="20" width="74" height="46" rx="2" fill="#020408" opacity=".75"/><text x="51" y="46" text-anchor="middle" fill="white" font-size="20" opacity=".65">⌂</text><text x="51" y="58" text-anchor="middle" fill="rgba(0,204,255,.7)" font-size="7" font-family="sans-serif">alexa</text><rect x="94" y="28" width="14" height="32" rx="3" fill="#0D1628" stroke="#1C2E4A" stroke-width="1"/><circle cx="101" cy="40" r="5" fill="#00CCFF" opacity=".6"/><rect x="22" y="72" width="60" height="8" rx="2" fill="#060B14" stroke="#1C2E4A" stroke-width="1"/><rect x="48" y="80" width="8" height="10" rx="2" fill="#0A1120"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">📺</div><div class="pp-thumb">📷</div><div class="pp-thumb">🏠</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Assistentes de Voz</a><span>›</span> Echo Show 5</div>
+<div class="pp-cat-label">Assistente de Voz com Tela</div>
+<div class="pp-product-name">Alexa Echo Show 5 — Tela 5,5"</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">6.120 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-new">✨ Tela Colorida</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">📷 Câmera 2MP</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">✓ Alexa</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 1.299,00</span><span class="pp-price-now"><sup>R$</sup> 978<sub>,60</sub></span><span class="pp-discount-tag">-25% OFF</span><span class="pp-installments">ou <b>6x R$ 163,10</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Alexa Echo Show 5',978.60,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-es5-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-es5-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-es5-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-es5-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Tela</span><span class="pp-spec-val">5,5" colorida HD</span></div><div class="pp-spec-item"><span class="pp-spec-key">Câmera</span><span class="pp-spec-val">2 MP + obturador físico</span></div><div class="pp-spec-item"><span class="pp-spec-key">Microfones</span><span class="pp-spec-val">4 mics far-field</span></div><div class="pp-spec-item"><span class="pp-spec-key">Som</span><span class="pp-spec-val">1.6" driver 1.5W</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi + Bluetooth 5.0</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">Bivolt 100–240V</span></div><div class="pp-spec-item"><span class="pp-spec-key">Assistente</span><span class="pp-spec-val">Alexa</span></div><div class="pp-spec-item"><span class="pp-spec-key">Videochamadas</span><span class="pp-spec-val">Sim (Alexa, Zoom)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Hub Zigbee</span><span class="pp-spec-val">Não (somente Show 8)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Dimensões</span><span class="pp-spec-val">148 × 86 × 73 mm</span></div></div></div>
+<div class="pp-tab-panel" id="tab-es5-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-echoshow5" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('echoshow5')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis incluído</p><div class="shipping-result" id="result-echoshow5"></div></div></div>
+<div class="pp-tab-panel" id="tab-es5-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">6.120 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:89%"></div></div><span class="rbar-pct">89%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:8%"></div></div><span class="rbar-pct">8%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#4A148C,#7B1FA2)">AM</div><div><div class="review-author">Ana M.</div><div class="review-date">20 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Uso no quarto como relógio, alarme e controle da casa. A tela é linda e o som é ótimo para o tamanho. Videochamadas com a família ficaram super fáceis!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#E65100,#FF9800)">GC</div><div><div class="review-author">Gabriel C.</div><div class="review-date">14 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Produto incrível! Controlo tudo pela tela com toque ou por voz. A Alexa entende meus comandos em português sem falhas.</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- ECHO SHOW 8 -->
+<div class="product-page" id="page-echoshow8">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="240" height="180" viewBox="0 0 130 95"><defs><linearGradient id="ptg4a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient><linearGradient id="ptg4b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2589FF"/><stop offset="100%" stop-color="#00CCFF"/></linearGradient></defs><rect x="4" y="8" width="104" height="65" rx="4" fill="url(#ptg4a)" stroke="#243B60" stroke-width="1.5"/><rect x="7" y="11" width="98" height="59" rx="3" fill="url(#ptg4b)" opacity=".18"/><rect x="10" y="14" width="92" height="53" rx="2" fill="#020408" opacity=".75"/><text x="56" y="43" text-anchor="middle" fill="white" font-size="22" opacity=".65">⌂</text><text x="56" y="57" text-anchor="middle" fill="rgba(0,204,255,.7)" font-size="8" font-family="sans-serif">alexa</text><rect x="108" y="22" width="15" height="36" rx="3" fill="#0D1628" stroke="#1C2E4A" stroke-width="1"/><circle cx="115" cy="36" r="6" fill="#00CCFF" opacity=".6"/><rect x="18" y="73" width="76" height="8" rx="2" fill="#060B14" stroke="#1C2E4A" stroke-width="1"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">📺</div><div class="pp-thumb">📷</div><div class="pp-thumb">🔊</div><div class="pp-thumb">🏠</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Assistentes de Voz</a><span>›</span> Echo Show 8</div>
+<div class="pp-cat-label">Assistente Premium com Tela</div>
+<div class="pp-product-name">Alexa Echo Show 8 — Tela 8" HD</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.9</span><span class="pp-rating-count">4.890 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-new">✨ Premium</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">📷 Câmera 13MP</span><span class="pp-badge" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);color:var(--gold);">🌐 Hub Zigbee</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 3.199,00</span><span class="pp-price-now"><sup>R$</sup> 2.518<sub>,60</sub></span><span class="pp-discount-tag">-21% OFF</span><span class="pp-installments">ou <b>12x R$ 209,88</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Alexa Echo Show 8',2518.60,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-es8-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-es8-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-es8-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-es8-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Tela</span><span class="pp-spec-val">8" HD+ 1280×800</span></div><div class="pp-spec-item"><span class="pp-spec-key">Câmera</span><span class="pp-spec-val">13 MP ultra-wide</span></div><div class="pp-spec-item"><span class="pp-spec-key">Som</span><span class="pp-spec-val">2 drivers estéreo Dolby</span></div><div class="pp-spec-item"><span class="pp-spec-key">Hub Zigbee</span><span class="pp-spec-val">Sim (integrado)</span></div><div class="pp-spec-item"><span class="pp-spec-key">eero Wi-Fi</span><span class="pp-spec-val">Sim (mesh integrado)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi + Bluetooth 5.0</span></div><div class="pp-spec-item"><span class="pp-spec-key">Microfones</span><span class="pp-spec-val">4 far-field + far-field beam-forming</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">Bivolt 100–240V</span></div><div class="pp-spec-item"><span class="pp-spec-key">Videochamadas</span><span class="pp-spec-val">Alexa, Zoom, Teams</span></div><div class="pp-spec-item"><span class="pp-spec-key">Dimensões</span><span class="pp-spec-val">200 × 135 × 99 mm</span></div></div></div>
+<div class="pp-tab-panel" id="tab-es8-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-echoshow8" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('echoshow8')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis incluído</p><div class="shipping-result" id="result-echoshow8"></div></div></div>
+<div class="pp-tab-panel" id="tab-es8-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.9</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">4.890 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:93%"></div></div><span class="rbar-pct">93%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:5%"></div></div><span class="rbar-pct">5%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#B71C1C,#E53935)">RL</div><div><div class="review-author">Ricardo L.</div><div class="review-date">26 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">O hub Zigbee integrado valeu a pena — agora controlo todas as lâmpadas e sensores da casa diretamente por ele. A câmera 13MP é impressionante para videochamadas!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#00695C,#00897B)">PF</div><div><div class="review-author">Patricia F.</div><div class="review-date">18 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Melhor compra que fiz para casa inteligente. O som é potente, a tela é nítida e a Alexa responde a tudo. Vale cada centavo!</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- FITA LED -->
+<div class="product-page" id="page-fitaled">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="220" height="160" viewBox="0 0 120 90"><defs><linearGradient id="ptg5" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#FF4D2E"/><stop offset="33%" stop-color="#FFB800"/><stop offset="66%" stop-color="#00FFD0"/><stop offset="100%" stop-color="#2589FF"/></linearGradient></defs><rect x="8" y="36" width="104" height="14" rx="4" fill="#0D1628" stroke="#243B60" stroke-width="1.5"/><rect x="8" y="36" width="104" height="5" rx="3" fill="url(#ptg5)" opacity=".9"/><circle cx="22" cy="43" r="5" fill="#FF4D2E" opacity=".9"/><circle cx="38" cy="43" r="5" fill="#FFB800" opacity=".9"/><circle cx="54" cy="43" r="5" fill="#00FFD0" opacity=".9"/><circle cx="70" cy="43" r="5" fill="#2589FF" opacity=".9"/><circle cx="86" cy="43" r="5" fill="#CC00FF" opacity=".9"/><circle cx="102" cy="43" r="5" fill="#FF4D2E" opacity=".9"/><ellipse cx="60" cy="43" rx="56" ry="18" fill="none" stroke="rgba(0,204,255,.08)" stroke-width="8"/><rect x="55" y="54" width="10" height="12" rx="2" fill="#0D1628" stroke="#243B60" stroke-width="1"/><text x="60" y="77" text-anchor="middle" fill="var(--mist)" font-size="7" font-family="sans-serif">Wi-Fi ◉ RGB ◉ Alexa</text></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">💡</div><div class="pp-thumb">🎨</div><div class="pp-thumb">📱</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Iluminação</a><span>›</span> Fita LED</div>
+<div class="pp-cat-label">Iluminação Smart</div>
+<div class="pp-product-name">Fita LED Wi-Fi RGB Inteligente</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">3.680 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-new">✨ Destaque</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">🎨 16M cores</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">✓ Alexa</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 199,90</span><span class="pp-price-now"><sup>R$</sup> 145<sub>,19</sub></span><span class="pp-discount-tag">-27% OFF</span><span class="pp-installments">ou <b>3x R$ 48,40</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Fita LED Wi-Fi RGB',145.19,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-fl-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-fl-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-fl-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-fl-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Comprimento</span><span class="pp-spec-val">5 metros</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tipo LED</span><span class="pp-spec-val">RGB (16M cores)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">Potência</span><span class="pp-spec-val">24W (5m)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">Bivolt 100–240V</span></div><div class="pp-spec-item"><span class="pp-spec-key">Compatibilidade</span><span class="pp-spec-val">Alexa, Google Home</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Cortável</span><span class="pp-spec-val">Sim (a cada 5cm)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Modos</span><span class="pp-spec-val">Música, cenas, cronômetro</span></div><div class="pp-spec-item"><span class="pp-spec-key">Hub necessário</span><span class="pp-spec-val">Não</span></div></div></div>
+<div class="pp-tab-panel" id="tab-fl-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-fitaled" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('fitaled')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis para compras acima de R$ 299,00</p><div class="shipping-result" id="result-fitaled"></div></div></div>
+<div class="pp-tab-panel" id="tab-fl-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">3.680 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:88%"></div></div><span class="rbar-pct">88%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:9%"></div></div><span class="rbar-pct">9%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#FF4D2E,#FF8F00)">LB</div><div><div class="review-author">Lucas B.</div><div class="review-date">16 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Coloquei no quarto e a transformação foi incrível! As cores são vibrantes e o modo sincronizado com música é sensacional. App fácil de usar.</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#00695C,#26A69A)">JS</div><div><div class="review-author">Julia S.</div><div class="review-date">10 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Boa qualidade e fácil instalação. A aderência da fita é excelente. Controlo pela Alexa sem problemas. Recomendo!</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- ASPIRADOR -->
+<div class="product-page" id="page-aspirador">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="210" height="200" viewBox="0 0 120 110"><defs><linearGradient id="ptg6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E2D45"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs><circle cx="60" cy="58" r="40" fill="url(#ptg6)" stroke="#243B60" stroke-width="1.5"/><circle cx="60" cy="58" r="34" fill="none" stroke="#1C2E4A" stroke-width="1"/><circle cx="60" cy="58" r="14" fill="#0A1120" stroke="#243B60" stroke-width="1"/><circle cx="60" cy="58" r="5" fill="#0E6FE8" opacity=".8"/><circle cx="60" cy="58" r="2.5" fill="#00CCFF"/><circle cx="60" cy="24" r="4" fill="#00FFD0" opacity=".9"/><circle cx="60" cy="24" r="2" fill="white"/><path d="M36,58 Q36,34 60,34 Q84,34 84,58" fill="none" stroke="#0E6FE8" stroke-width="1.5" opacity=".4" stroke-dasharray="4,3"/><circle cx="90" cy="48" r="5" fill="#0A1120" stroke="#243B60" stroke-width="1"/><circle cx="90" cy="48" r="2.5" fill="#0E6FE8" opacity=".7"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">🤖</div><div class="pp-thumb">🗺️</div><div class="pp-thumb">📱</div><div class="pp-thumb">🧹</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Robôs de Limpeza</a><span>›</span> Aspirador Robô</div>
+<div class="pp-cat-label">Robô de Limpeza</div>
+<div class="pp-product-name">Aspirador Robô Inteligente Wi-Fi</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">1.890 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-fire">🔥 Top vendas</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">🗺️ LiDAR</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">✓ Alexa</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 1.149,00</span><span class="pp-price-now"><sup>R$</sup> 839<sub>,99</sub></span><span class="pp-discount-tag">-27% OFF</span><span class="pp-installments">ou <b>6x R$ 140,00</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Aspirador Robô Inteligente',839.99,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-asp-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-asp-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-asp-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-asp-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Navegação</span><span class="pp-spec-val">LiDAR + mapeamento laser</span></div><div class="pp-spec-item"><span class="pp-spec-key">Sucção</span><span class="pp-spec-val">2.500 Pa</span></div><div class="pp-spec-item"><span class="pp-spec-key">Função mop</span><span class="pp-spec-val">Sim (reservatório 200ml)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Bateria</span><span class="pp-spec-val">2.600 mAh (~120 min)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Auto-recarga</span><span class="pp-spec-val">Sim</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">Compatibilidade</span><span class="pp-spec-val">Alexa, Google Home</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Nível de ruído</span><span class="pp-spec-val">~62 dB</span></div><div class="pp-spec-item"><span class="pp-spec-key">Altura máx.</span><span class="pp-spec-val">7,2 cm</span></div></div></div>
+<div class="pp-tab-panel" id="tab-asp-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-aspirador" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('aspirador')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis incluído</p><div class="shipping-result" id="result-aspirador"></div></div></div>
+<div class="pp-tab-panel" id="tab-asp-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">1.890 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:88%"></div></div><span class="rbar-pct">88%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:9%"></div></div><span class="rbar-pct">9%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#1565C0,#1976D2)">MR</div><div><div class="review-author">Marcos R.</div><div class="review-date">24 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Revolucionou minha vida! O mapeamento a laser é preciso, ele desvia de todos os obstáculos sem problema. A função mop é um bônus incrível. Uso todo dia!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#AD1457,#E91E63)">SN</div><div><div class="review-author">Sandra N.</div><div class="review-date">17 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Excelente custo-benefício. Minha casa fica limpa automaticamente enquanto trabalho. Programei por horário pelo app e nunca mais precisei me preocupar.</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- CÂMERA DOMÉSTICA -->
+<div class="product-page" id="page-camdomes">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="190" height="220" viewBox="0 0 100 120"><defs><linearGradient id="ptg7" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#152240"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs><ellipse cx="50" cy="56" rx="28" ry="30" fill="url(#ptg7)" stroke="#243B60" stroke-width="1.5"/><circle cx="50" cy="52" r="18" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/><circle cx="50" cy="52" r="12" fill="#060B14"/><circle cx="50" cy="52" r="8" fill="#0E6FE8" opacity=".2"/><circle cx="50" cy="52" r="5" fill="#0E6FE8" opacity=".6"/><circle cx="50" cy="52" r="2.5" fill="white" opacity=".9"/><circle cx="50" cy="30" r="3" fill="#00FFD0" opacity=".9"/><circle cx="50" cy="30" r="1.5" fill="white"/><rect x="42" y="86" width="16" height="6" rx="2" fill="#0A1120" stroke="#243B60" stroke-width="1"/><rect x="46" y="92" width="8" height="12" rx="2" fill="#060B14"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">📹</div><div class="pp-thumb">🌙</div><div class="pp-thumb">📱</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Câmeras</a><span>›</span> Câmera Doméstica</div>
+<div class="pp-cat-label">Câmera Smart</div>
+<div class="pp-product-name">Câmera Doméstica Wi-Fi 360°</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.7</span><span class="pp-rating-count">4.210 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-fire">🔥 Vigilância 24h</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">360° Pan-Tilt</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">🌙 Visão Noturna</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 169,90</span><span class="pp-price-now"><sup>R$</sup> 107<sub>,82</sub></span><span class="pp-discount-tag">-37% OFF</span><span class="pp-installments">ou <b>3x R$ 35,94</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Câmera Doméstica Wi-Fi',107.82,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-cd-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-cd-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-cd-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-cd-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Resolução</span><span class="pp-spec-val">1080p Full HD</span></div><div class="pp-spec-item"><span class="pp-spec-key">Rotação</span><span class="pp-spec-val">360° horizontal / 90° vertical</span></div><div class="pp-spec-item"><span class="pp-spec-key">Visão noturna</span><span class="pp-spec-val">Sim (IR até 10m)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Detecção</span><span class="pp-spec-val">Movimento, pessoa, som</span></div><div class="pp-spec-item"><span class="pp-spec-key">Armazenamento</span><span class="pp-spec-val">SD card até 128GB / Nuvem</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Áudio</span><span class="pp-spec-val">Bidirecional (microfone + caixinha)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Uso</span><span class="pp-spec-val">Interno (indoor)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">5V USB (cabo incluso)</span></div></div></div>
+<div class="pp-tab-panel" id="tab-cd-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-camdomes" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('camdomes')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis para compras acima de R$ 299,00</p><div class="shipping-result" id="result-camdomes"></div></div></div>
+<div class="pp-tab-panel" id="tab-cd-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.7</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">4.210 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:84%"></div></div><span class="rbar-pct">84%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:10%"></div></div><span class="rbar-pct">10%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:4%"></div></div><span class="rbar-pct">4%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#6A1B9A,#AB47BC)">KL</div><div><div class="review-author">Karen L.</div><div class="review-date">14 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Imagem nítida mesmo à noite. Consigo acompanhar meus pets pelo app quando estou no trabalho. O áudio bidirecional funciona muito bem!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#0277BD,#0288D1)">DM</div><div><div class="review-author">Diego M.</div><div class="review-date">07 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Melhor câmera pelo preço que encontrei. Instalei em 5 minutos, funciona estável há 2 meses. Gravação em loop no SD sem problemas.</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- CÂMERA SEGURANÇA -->
+<div class="product-page" id="page-camseg">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="200" height="200" viewBox="0 0 110 110"><defs><linearGradient id="ptg8" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs><rect x="18" y="35" width="55" height="38" rx="8" fill="url(#ptg8)" stroke="#243B60" stroke-width="1.5"/><circle cx="52" cy="54" r="14" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/><circle cx="52" cy="54" r="9" fill="#060B14"/><circle cx="52" cy="54" r="5" fill="#0E6FE8" opacity=".4"/><circle cx="52" cy="54" r="2.5" fill="#00CCFF" opacity=".9"/><rect x="73" y="46" width="20" height="14" rx="3" fill="#0D1628" stroke="#243B60" stroke-width="1"/><circle cx="83" cy="53" r="4" fill="#00FFD0" opacity=".7"/><rect x="26" y="43" width="6" height="6" rx="1" fill="#00CCFF" opacity=".4"/><rect x="26" y="53" width="6" height="6" rx="1" fill="#00CCFF" opacity=".4"/><rect x="38" y="80" width="20" height="12" rx="3" fill="#060B14" stroke="#1C2E4A" stroke-width="1"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">📹</div><div class="pp-thumb">🌧️</div><div class="pp-thumb">📱</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Câmeras</a><span>›</span> Câmera Externa</div>
+<div class="pp-cat-label">Câmera Smart Externa</div>
+<div class="pp-product-name">Câmera Segurança Externa Wi-Fi</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">2.760 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-new">🌧️ IP67</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">🔍 Auto-Rastreio</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">Full HD 1080p</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 329,00</span><span class="pp-price-now"><sup>R$</sup> 231<sub>,84</sub></span><span class="pp-discount-tag">-30% OFF</span><span class="pp-installments">ou <b>6x R$ 38,64</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Câmera Segurança Externa',231.84,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-cs-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-cs-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-cs-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-cs-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Resolução</span><span class="pp-spec-val">1080p Full HD</span></div><div class="pp-spec-item"><span class="pp-spec-key">Proteção IP</span><span class="pp-spec-val">IP67 (à prova d'água)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Rastreio</span><span class="pp-spec-val">Automático por movimento</span></div><div class="pp-spec-item"><span class="pp-spec-key">Visão noturna</span><span class="pp-spec-val">IR colorido até 30m</span></div><div class="pp-spec-item"><span class="pp-spec-key">Armazenamento</span><span class="pp-spec-val">SD 256GB / Nuvem</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4/5 GHz + Ethernet</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Sirene</span><span class="pp-spec-val">Sim (alarme integrado)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Alimentação</span><span class="pp-spec-val">PoE ou 12V DC</span></div><div class="pp-spec-item"><span class="pp-spec-key">Temperatura op.</span><span class="pp-spec-val">-30°C a +60°C</span></div></div></div>
+<div class="pp-tab-panel" id="tab-cs-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-camseg" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('camseg')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis incluído</p><div class="shipping-result" id="result-camseg"></div></div></div>
+<div class="pp-tab-panel" id="tab-cs-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">2.760 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:88%"></div></div><span class="rbar-pct">88%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:9%"></div></div><span class="rbar-pct">9%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#37474F,#546E7A)">VO</div><div><div class="review-author">Vitor O.</div><div class="review-date">21 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Instalei na entrada da garagem. O rastreio automático funciona perfeitamente e o alerta de movimento chega em 2 segundos. A qualidade da imagem à noite impressiona!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#1A237E,#3949AB)">TF</div><div><div class="review-author">Tiago F.</div><div class="review-date">13 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">IP67 real — ficou na chuva pesada e funcionou perfeitamente. Conexão estável via ethernet. Excelente para vigilância residencial!</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- CÂMERA ESPIÃ -->
+<div class="product-page" id="page-camespia">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="170" height="220" viewBox="0 0 90 120"><defs><linearGradient id="ptg9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1C2E4A"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs><rect x="28" y="18" width="34" height="62" rx="6" fill="url(#ptg9)" stroke="#243B60" stroke-width="1.5"/><circle cx="45" cy="40" r="12" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/><circle cx="45" cy="40" r="8" fill="#060B14"/><circle cx="45" cy="40" r="4" fill="#0E6FE8" opacity=".5"/><circle cx="45" cy="40" r="2" fill="white" opacity=".9"/><circle cx="45" cy="23" r="2.5" fill="#FF4D2E" opacity=".8"/><rect x="32" y="60" width="26" height="3" rx="1.5" fill="#1C2E4A"/><rect x="32" y="66" width="16" height="3" rx="1.5" fill="#1C2E4A"/><circle cx="45" cy="90" r="5" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/><circle cx="45" cy="90" r="2.5" fill="#0E6FE8" opacity=".6"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">📷</div><div class="pp-thumb">🌙</div><div class="pp-thumb">💾</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Câmeras</a><span>›</span> Câmera Espiã</div>
+<div class="pp-cat-label">Câmera Smart Discreta</div>
+<div class="pp-product-name">Câmera Espiã Wi-Fi Visão Noturna</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.6</span><span class="pp-rating-count">1.430 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-fire">🔥 Custo-benefício</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">🤫 Discreta</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">🌙 Visão noturna</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 79,90</span><span class="pp-price-now"><sup>R$</sup> 47<sub>,16</sub></span><span class="pp-discount-tag">-41% OFF</span><span class="pp-installments">ou <b>3x R$ 15,72</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Câmera Espiã Wi-Fi',47.16,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-ce-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-ce-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-ce-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-ce-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Resolução</span><span class="pp-spec-val">1080p Full HD</span></div><div class="pp-spec-item"><span class="pp-spec-key">Dimensões</span><span class="pp-spec-val">Ultra compacta (pocket)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Visão noturna</span><span class="pp-spec-val">Sim (IR invisível)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Detecção</span><span class="pp-spec-val">Movimento + notificação</span></div><div class="pp-spec-item"><span class="pp-spec-key">Armazenamento</span><span class="pp-spec-val">SD card até 128GB (loop)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Alimentação</span><span class="pp-spec-val">5V USB (cabo incluso)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Modo espera</span><span class="pp-spec-val">Sim (ativação por movimento)</span></div><div class="pp-spec-item"><span class="pp-spec-key">LED status</span><span class="pp-spec-val">Desativável</span></div></div></div>
+<div class="pp-tab-panel" id="tab-ce-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-camespia" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('camespia')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis para compras acima de R$ 299,00</p><div class="shipping-result" id="result-camespia"></div></div></div>
+<div class="pp-tab-panel" id="tab-ce-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.6</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">1.430 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:82%"></div></div><span class="rbar-pct">82%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:10%"></div></div><span class="rbar-pct">10%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:5%"></div></div><span class="rbar-pct">5%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#4E342E,#795548)">RF</div><div><div class="review-author">Rafael F.</div><div class="review-date">18 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Usei no escritório para monitorar pacotes. Incrível para o preço! Fica completamente discreta, o LED de status pode ser desativado. Imagem clara mesmo no escuro.</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#00838F,#00ACC1)">IM</div><div><div class="review-author">Isabela M.</div><div class="review-date">11 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Ótima para monitorar crianças e pets. Discreta, fácil de instalar e o app é muito intuitivo. Preço imbatível!</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- CORTINA MOTORIZADA -->
+<div class="product-page" id="page-cortina">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="220" height="180" viewBox="0 0 120 95"><defs><linearGradient id="ptg10" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs><rect x="10" y="10" width="100" height="8" rx="4" fill="#243B60" stroke="#1C2E4A" stroke-width="1"/><rect x="20" y="18" width="35" height="55" rx="3" fill="url(#ptg10)" stroke="#1C2E4A" stroke-width="1" opacity=".9"/><rect x="65" y="18" width="35" height="55" rx="3" fill="url(#ptg10)" stroke="#1C2E4A" stroke-width="1" opacity=".9"/><path d="M20,18 Q37,28 37,73" fill="none" stroke="rgba(90,171,255,.35)" stroke-width="1.5"/><path d="M55,18 Q38,28 38,73" fill="none" stroke="rgba(90,171,255,.35)" stroke-width="1.5"/><path d="M65,18 Q82,28 82,73" fill="none" stroke="rgba(90,171,255,.35)" stroke-width="1.5"/><path d="M100,18 Q83,28 83,73" fill="none" stroke="rgba(90,171,255,.35)" stroke-width="1.5"/><rect x="52" y="6" width="16" height="10" rx="3" fill="#0E6FE8" opacity=".8"/><circle cx="60" cy="11" r="3" fill="#00CCFF" opacity=".7"/><text x="60" y="90" text-anchor="middle" fill="var(--mist)" font-size="7" font-family="sans-serif">Motor ◉ Wi-Fi ◉ Alexa</text></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">🪟</div><div class="pp-thumb">⚙️</div><div class="pp-thumb">📱</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Automação</a><span>›</span> Cortina Motorizada</div>
+<div class="pp-cat-label">Automação Smart</div>
+<div class="pp-product-name">Cortina Motorizada Alexa Wi-Fi</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">620 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-new">✨ Premium</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">⚙️ Motor Silencioso</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">✓ Alexa</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 1.399,00</span><span class="pp-price-now"><sup>R$</sup> 1.010<sub>,66</sub></span><span class="pp-discount-tag">-28% OFF</span><span class="pp-installments">ou <b>12x R$ 84,22</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Cortina Motorizada Alexa',1010.66,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-ct-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-ct-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-ct-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-ct-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Motor</span><span class="pp-spec-val">Silencioso &lt;35 dB</span></div><div class="pp-spec-item"><span class="pp-spec-key">Capacidade</span><span class="pp-spec-val">Cortinas até 30 kg</span></div><div class="pp-spec-item"><span class="pp-spec-key">Velocidade</span><span class="pp-spec-val">Ajustável (app)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">Compatibilidade</span><span class="pp-spec-val">Alexa, Google Home</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">NovaDigital / TuyaSmart</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">Bivolt 100–240V</span></div><div class="pp-spec-item"><span class="pp-spec-key">Agendamento</span><span class="pp-spec-val">Sim (horário + luz solar)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Controle remoto</span><span class="pp-spec-val">Incluso</span></div><div class="pp-spec-item"><span class="pp-spec-key">Instalação</span><span class="pp-spec-val">Trilho incluso (sem obra)</span></div></div></div>
+<div class="pp-tab-panel" id="tab-ct-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-cortina" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('cortina')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis incluído</p><div class="shipping-result" id="result-cortina"></div></div></div>
+<div class="pp-tab-panel" id="tab-ct-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">620 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:90%"></div></div><span class="rbar-pct">90%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:7%"></div></div><span class="rbar-pct">7%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#4527A0,#7E57C2)">LA</div><div><div class="review-author">Leticia A.</div><div class="review-date">23 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Simplesmente incrível! Acordo e falo 'Alexa, abrir cortinas' e pronto. O motor é silenciosíssimo. Melhor investimento que fiz para a automação residencial!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#E65100,#F57C00)">HP</div><div><div class="review-author">Henrique P.</div><div class="review-date">16 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Instalei sem furar uma parede! O trilho é incluso e a instalação é muito simples. O agendamento por horário de sol é sensacional.</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- PERSIANA ELÉTRICA -->
+<div class="product-page" id="page-persiana">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="220" height="175" viewBox="0 0 120 95"><defs><linearGradient id="ptg11" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A2840"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs><rect x="10" y="8" width="100" height="6" rx="3" fill="#243B60" stroke="#1C2E4A" stroke-width="1"/><rect x="12" y="18" width="96" height="5" rx="2" fill="url(#ptg11)" stroke="#1C2E4A" stroke-width="1"/><rect x="12" y="28" width="96" height="5" rx="2" fill="url(#ptg11)" stroke="#1C2E4A" stroke-width="1" opacity=".9"/><rect x="12" y="38" width="96" height="5" rx="2" fill="url(#ptg11)" stroke="#1C2E4A" stroke-width="1" opacity=".8"/><rect x="12" y="48" width="96" height="5" rx="2" fill="url(#ptg11)" stroke="#1C2E4A" stroke-width="1" opacity=".7"/><rect x="12" y="58" width="96" height="5" rx="2" fill="url(#ptg11)" stroke="#1C2E4A" stroke-width="1" opacity=".6"/><rect x="12" y="68" width="96" height="5" rx="2" fill="url(#ptg11)" stroke="#1C2E4A" stroke-width="1" opacity=".5"/><rect x="104" y="6" width="12" height="20" rx="3" fill="#0E6FE8" opacity=".7"/><circle cx="110" cy="15" r="3.5" fill="#00FFD0" opacity=".9"/><text x="60" y="90" text-anchor="middle" fill="var(--mist)" font-size="7" font-family="sans-serif">Elétrica ◉ Wi-Fi ◉ App</text></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">🪟</div><div class="pp-thumb">⚙️</div><div class="pp-thumb">📱</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Automação</a><span>›</span> Persiana Elétrica</div>
+<div class="pp-cat-label">Automação Smart</div>
+<div class="pp-product-name">Persiana Elétrica Wi-Fi Inteligente</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.7</span><span class="pp-rating-count">480 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-new">✨ Novo</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">📱 App</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">✓ Alexa/Google</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 219,00</span><span class="pp-price-now"><sup>R$</sup> 138<sub>,96</sub></span><span class="pp-discount-tag">-37% OFF</span><span class="pp-installments">ou <b>3x R$ 46,32</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Persiana Elétrica Wi-Fi',138.96,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-ps-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-ps-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-ps-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-ps-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Tipo</span><span class="pp-spec-val">Persianas horizontais</span></div><div class="pp-spec-item"><span class="pp-spec-key">Motor</span><span class="pp-spec-val">Silencioso integrado</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">Compatibilidade</span><span class="pp-spec-val">Alexa, Google Home</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Controle</span><span class="pp-spec-val">Voz + App + Remoto</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">Bivolt 100–240V</span></div><div class="pp-spec-item"><span class="pp-spec-key">Agendamento</span><span class="pp-spec-val">Sim (horário automático)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Inclinação</span><span class="pp-spec-val">Ajustável 0–90°</span></div><div class="pp-spec-item"><span class="pp-spec-key">Instalação</span><span class="pp-spec-val">Fácil, sem obra</span></div></div></div>
+<div class="pp-tab-panel" id="tab-ps-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-persiana" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('persiana')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis para compras acima de R$ 299,00</p><div class="shipping-result" id="result-persiana"></div></div></div>
+<div class="pp-tab-panel" id="tab-ps-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.7</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">480 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:85%"></div></div><span class="rbar-pct">85%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:10%"></div></div><span class="rbar-pct">10%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:3%"></div></div><span class="rbar-pct">3%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#1B5E20,#2E7D32)">EV</div><div><div class="review-author">Eduardo V.</div><div class="review-date">19 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Instalei no escritório e ficou perfeito! Programei para abrir automaticamente às 7h e fechar às 18h. Funciona sem falhas há meses. Controle por voz muito prático!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#880E4F,#AD1457)">NS</div><div><div class="review-author">Nathalia S.</div><div class="review-date">12 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Produto de qualidade. A instalação foi simples, sem furar nada. O app funciona bem e o controle remoto incluso é um plus. Recomendo!</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- LUMINÁRIA DE TETO -->
+<div class="product-page" id="page-luminaria">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="220" height="165" viewBox="0 0 120 90"><defs><radialGradient id="ptg12a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00CCFF" stop-opacity=".3"/><stop offset="100%" stop-color="transparent"/></radialGradient><linearGradient id="ptg12b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#152240"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs><circle cx="60" cy="48" r="42" fill="url(#ptg12a)"/><circle cx="60" cy="48" r="34" fill="url(#ptg12b)" stroke="#243B60" stroke-width="1.5"/><circle cx="60" cy="48" r="26" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/><circle cx="60" cy="48" r="18" fill="#00CCFF" opacity=".1"/><circle cx="60" cy="48" r="10" fill="#00CCFF" opacity=".22"/><circle cx="60" cy="48" r="4" fill="#00FFD0" opacity=".9"/><rect x="55" y="4" width="10" height="12" rx="2" fill="#060B14" stroke="#1C2E4A" stroke-width="1"/><text x="60" y="83" text-anchor="middle" fill="var(--mist)" font-size="7" font-family="sans-serif">Plafon ◉ Wi-Fi ◉ RGB</text></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">💡</div><div class="pp-thumb">🎨</div><div class="pp-thumb">📱</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Iluminação</a><span>›</span> Luminária de Teto</div>
+<div class="pp-cat-label">Iluminação Smart</div>
+<div class="pp-product-name">Luminária de Teto Wi-Fi RGB</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">1.140 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-new">✨ Novo</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">🎨 RGB+Branco</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">✓ Alexa</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 249,00</span><span class="pp-price-now"><sup>R$</sup> 172<sub>,62</sub></span><span class="pp-discount-tag">-31% OFF</span><span class="pp-installments">ou <b>3x R$ 57,54</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Luminária de Teto Wi-Fi',172.62,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-lu-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-lu-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-lu-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-lu-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Tipo</span><span class="pp-spec-val">Plafon LED de teto</span></div><div class="pp-spec-item"><span class="pp-spec-key">Potência</span><span class="pp-spec-val">36W</span></div><div class="pp-spec-item"><span class="pp-spec-key">Cores</span><span class="pp-spec-val">RGB + Branco quente/frio</span></div><div class="pp-spec-item"><span class="pp-spec-key">Temperatura cor</span><span class="pp-spec-val">2.700K–6.500K ajustável</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">Compatibilidade</span><span class="pp-spec-val">Alexa, Google Home</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">Bivolt 100–240V</span></div><div class="pp-spec-item"><span class="pp-spec-key">Diâmetro</span><span class="pp-spec-val">30 cm</span></div><div class="pp-spec-item"><span class="pp-spec-key">Hub necessário</span><span class="pp-spec-val">Não</span></div></div></div>
+<div class="pp-tab-panel" id="tab-lu-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-luminaria" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('luminaria')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis para compras acima de R$ 299,00</p><div class="shipping-result" id="result-luminaria"></div></div></div>
+<div class="pp-tab-panel" id="tab-lu-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">1.140 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:88%"></div></div><span class="rbar-pct">88%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:9%"></div></div><span class="rbar-pct">9%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#F57F17,#FBC02D)">CA</div><div><div class="review-author">Camila A.</div><div class="review-date">17 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Ficou linda no quarto! A luz branca fria para trabalhar e quente para relaxar. O modo RGB para festas é incrível. Instalei em 10 minutos!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#0D47A1,#1976D2)">FT</div><div><div class="review-author">Felipe T.</div><div class="review-date">10 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Excelente custo-benefício. Brilho intenso, cores vivas. Uso o modo automático baseado na hora do dia e a casa fica com ambiente perfeito. Alexa funciona perfeitamente!</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- CONTROLE REMOTO -->
+<div class="product-page" id="page-controle">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="150" height="240" viewBox="0 0 80 130"><defs><linearGradient id="ptg13" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#152240"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs><rect x="18" y="8" width="44" height="112" rx="12" fill="url(#ptg13)" stroke="#243B60" stroke-width="1.5"/><circle cx="40" cy="34" r="11" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/><circle cx="40" cy="34" r="7" fill="#0E6FE8" opacity=".3"/><circle cx="40" cy="34" r="3.5" fill="#0E6FE8" opacity=".8"/><circle cx="40" cy="20" r="3.5" fill="#00FFD0" opacity=".8"/><circle cx="40" cy="20" r="1.5" fill="white"/><rect x="27" y="52" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="44" y="52" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="27" y="66" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="44" y="66" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="27" y="80" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="44" y="80" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="27" y="94" width="9" height="9" rx="3" fill="#1C2E4A"/><rect x="44" y="94" width="9" height="9" rx="3" fill="#1C2E4A"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">📺</div><div class="pp-thumb">❄️</div><div class="pp-thumb">📱</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Controles</a><span>›</span> Controle Universal</div>
+<div class="pp-cat-label">Controle Smart</div>
+<div class="pp-product-name">Controle Remoto Universal Wi-Fi</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.8</span><span class="pp-rating-count">3.290 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-fire">🔥 Custo-benefício</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">📡 IR Universal</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">✓ Alexa</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 119,90</span><span class="pp-price-now"><sup>R$</sup> 75<sub>,51</sub></span><span class="pp-discount-tag">-37% OFF</span><span class="pp-installments">ou <b>3x R$ 25,17</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Controle Remoto Universal',75.51,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-cr-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-cr-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-cr-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-cr-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Tecnologia</span><span class="pp-spec-val">Infravermelho (IR) + RF</span></div><div class="pp-spec-item"><span class="pp-spec-key">Dispositivos</span><span class="pp-spec-val">TV, AC, DVD, som, projetor</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">Compatibilidade</span><span class="pp-spec-val">Alexa, Google Home</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Base de dados</span><span class="pp-spec-val">+100.000 modelos</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">5V USB (cabo incluso)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Alcance</span><span class="pp-spec-val">Até 10 metros</span></div><div class="pp-spec-item"><span class="pp-spec-key">Aprendizagem</span><span class="pp-spec-val">Sim (aprende controles)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Hub necessário</span><span class="pp-spec-val">Não</span></div></div></div>
+<div class="pp-tab-panel" id="tab-cr-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-controle" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('controle')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis para compras acima de R$ 299,00</p><div class="shipping-result" id="result-controle"></div></div></div>
+<div class="pp-tab-panel" id="tab-cr-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.8</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">3.290 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:88%"></div></div><span class="rbar-pct">88%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:9%"></div></div><span class="rbar-pct">9%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#212121,#424242)">AT</div><div><div class="review-author">André T.</div><div class="review-date">20 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Controlo meu ar-condicionado, TV e som pela Alexa! Cadastrei todos em 15 minutos. O banco de dados é enorme — reconheceu todos os meus aparelhos de primeira!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#33691E,#558B2F)">CG</div><div><div class="review-author">Cristina G.</div><div class="review-date">12 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Incrível para ligar/desligar aparelhos antigos com a Alexa. Agora consigo dizer 'Alexa, ligar o ar' e funciona perfeitamente. Melhor compra pelo preço!</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
+</div>
+
+<!-- ALIMENTADOR AUTOMÁTICO -->
+<div class="product-page" id="page-alimentador">
+<div class="pp-hero"><div class="pp-grid-bg"></div><div class="pp-layout">
+<div class="pp-gallery"><div class="pp-main-img" style="min-height:360px;"><svg width="200" height="200" viewBox="0 0 110 110"><defs><linearGradient id="ptg14" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E2D45"/><stop offset="100%" stop-color="#060B14"/></linearGradient></defs><rect x="25" y="12" width="60" height="70" rx="8" fill="url(#ptg14)" stroke="#243B60" stroke-width="1.5"/><rect x="30" y="20" width="50" height="34" rx="5" fill="#0A1120" stroke="#1C2E4A" stroke-width="1"/><circle cx="42" cy="34" r="5" fill="#0E6FE8" opacity=".6"/><circle cx="55" cy="34" r="5" fill="#00CCFF" opacity=".6"/><circle cx="68" cy="34" r="5" fill="#00FFD0" opacity=".6"/><text x="55" y="47" text-anchor="middle" fill="rgba(255,255,255,.4)" font-size="7" font-family="sans-serif">AUTO FEED</text><rect x="30" y="58" width="50" height="8" rx="3" fill="#1C2E4A"/><ellipse cx="55" cy="84" rx="32" ry="10" fill="#0A1120" stroke="#243B60" stroke-width="1.5"/><ellipse cx="55" cy="84" rx="22" ry="7" fill="#060B14"/><circle cx="45" cy="83" r="3" fill="#FFB800" opacity=".7"/><circle cx="55" cy="83" r="3" fill="#FFB800" opacity=".7"/><circle cx="65" cy="83" r="3" fill="#FFB800" opacity=".7"/></svg></div>
+<div class="pp-thumbs"><div class="pp-thumb active">🐾</div><div class="pp-thumb">📷</div><div class="pp-thumb">📱</div><div class="pp-thumb">⏰</div></div></div>
+<div class="pp-info">
+<div class="pp-breadcrumb"><a onclick="closeProductPage()">Início</a><span>›</span><a onclick="closeProductPage()">Pet Smart</a><span>›</span> Alimentador Pet</div>
+<div class="pp-cat-label">Pet Smart</div>
+<div class="pp-product-name">Alimentador Automático Pet Wi-Fi</div>
+<div class="pp-rating-row"><div class="pp-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="pp-rating-num">4.9</span><span class="pp-rating-count">2.010 avaliações</span></div>
+<div class="pp-badge-row"><span class="pp-badge badge-new">🐾 Pets</span><span class="pp-badge" style="background:rgba(0,204,255,.12);border:1px solid rgba(0,204,255,.3);color:var(--accent);">📷 Câmera HD</span><span class="pp-badge" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.25);color:#4CAF50;">⏰ Agendamento</span></div>
+<div class="pp-price-block"><span class="pp-price-old">De R$ 699,00</span><span class="pp-price-now"><sup>R$</sup> 479<sub>,84</sub></span><span class="pp-discount-tag">-31% OFF</span><span class="pp-installments">ou <b>6x R$ 79,97</b> sem juros no cartão</span></div>
+<div class="pp-ctas"><button class="btn-primary" onclick="addToCart('Alimentador Automático Pet',479.84,event)">🛒 Adicionar ao Carrinho</button><button class="pp-btn-wish">♡ Favoritar</button></div>
+<div class="pp-tab-nav"><button class="pp-tab-btn active" onclick="switchTab(this,'tab-al-spec')">Especificações</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-al-frete')">Frete</button><button class="pp-tab-btn" onclick="switchTab(this,'tab-al-rev')">Avaliações</button></div>
+<div class="pp-tab-panel active" id="tab-al-spec"><div class="pp-specs-grid"><div class="pp-spec-item"><span class="pp-spec-key">Capacidade</span><span class="pp-spec-val">6 litros (ração seca)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Câmera</span><span class="pp-spec-val">1080p Full HD</span></div><div class="pp-spec-item"><span class="pp-spec-key">Áudio</span><span class="pp-spec-val">Bidirecional (falar com pet)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Agendamentos</span><span class="pp-spec-val">Até 12 por dia</span></div><div class="pp-spec-item"><span class="pp-spec-key">Porção mínima</span><span class="pp-spec-val">5ml (controlável)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Conectividade</span><span class="pp-spec-val">Wi-Fi 2.4 GHz</span></div><div class="pp-spec-item"><span class="pp-spec-key">App</span><span class="pp-spec-val">TuyaSmart (PT-BR)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Bateria backup</span><span class="pp-spec-val">Sim (falta de energia)</span></div><div class="pp-spec-item"><span class="pp-spec-key">Sensor ração</span><span class="pp-spec-val">Alerta nível baixo</span></div><div class="pp-spec-item"><span class="pp-spec-key">Tensão</span><span class="pp-spec-val">Bivolt 100–240V</span></div></div></div>
+<div class="pp-tab-panel" id="tab-al-frete"><div class="pp-shipping-form"><h4>Calcular Frete e Prazo</h4><div class="shipping-input-row"><input type="text" class="shipping-cep-input" id="cep-alimentador" placeholder="Digite seu CEP (ex: 70040-020)" maxlength="9" oninput="maskCep(this)"><button class="btn-calc-frete" onclick="calcFrete('alimentador')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Calcular</button></div><p class="shipping-note">🎁 Frete grátis incluído</p><div class="shipping-result" id="result-alimentador"></div></div></div>
+<div class="pp-tab-panel" id="tab-al-rev"><div class="rating-summary"><div class="rating-big"><div class="rating-big-num">4.9</div><div class="rating-big-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="rating-big-count">2.010 avaliações</div></div><div class="rating-bars"><div class="rbar-row"><span class="rbar-lbl">5★</span><div class="rbar-track"><div class="rbar-fill" style="width:93%"></div></div><span class="rbar-pct">93%</span></div><div class="rbar-row"><span class="rbar-lbl">4★</span><div class="rbar-track"><div class="rbar-fill" style="width:5%"></div></div><span class="rbar-pct">5%</span></div><div class="rbar-row"><span class="rbar-lbl">3★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">2★</span><div class="rbar-track"><div class="rbar-fill" style="width:1%"></div></div><span class="rbar-pct">1%</span></div><div class="rbar-row"><span class="rbar-lbl">1★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div></div></div>
+<div class="pp-reviews"><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#BF360C,#E64A19)">PE</div><div><div class="review-author">Paula E.</div><div class="review-date">25 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Viagem de fim de semana tranquila pela primeira vez! Consigo ver meu gato comer pela câmera em tempo real e ainda falar com ele. A bateria de backup é fundamental — já precisou uma vez!</div><div class="review-verified">✓ Compra verificada</div></div><div class="review-card"><div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#1A237E,#283593)">YC</div><div><div class="review-author">Yuri C.</div><div class="review-date">18 mai 2026</div></div></div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Tenho 3 cachorros e 2 gatos. Com esse alimentador, nunca mais me preocupo com os horários de alimentação. Câmera nítida, app excelente. Recomendo 100%!</div><div class="review-verified">✓ Compra verificada</div></div></div>
+</div></div></div></div></div>
 </div>
 
 <!-- CART MODAL -->
