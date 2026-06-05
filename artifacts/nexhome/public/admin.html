@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexHome Admin — Pedidos</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#020408;--surface:#0A1120;--panel:#101D35;--panel2:#152240;
+  --rim:#1C2E4A;--rim2:#243B60;--accent:#0CF;--blue:#0E6FE8;--blue2:#2589FF;
+  --ember:#FF4D2E;--gold:#FFB800;--green:#22c55e;--mist:#6B8BAF;
+  --fog:#99B5D5;--snow:#D6E8FF;--white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:16px;background:var(--void);}
+body{background:var(--void);color:var(--snow);font-family:'Exo 2',sans-serif;min-height:100vh;}
+
+/* LOGIN */
+#loginScreen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--void);}
+.login-box{background:var(--panel2);border:1px solid var(--rim2);border-radius:20px;padding:40px;width:min(380px,92vw);text-align:center;}
+.login-box h1{font-family:'Rajdhani',sans-serif;font-size:1.8rem;font-weight:700;margin-bottom:6px;}
+.login-box p{color:var(--mist);font-size:.85rem;margin-bottom:28px;}
+.inp{width:100%;background:var(--surface);border:1px solid var(--rim2);border-radius:10px;padding:12px 16px;color:var(--snow);font-family:'Exo 2',sans-serif;font-size:.9rem;outline:none;margin-bottom:14px;transition:border-color .2s;}
+.inp:focus{border-color:var(--blue2);}
+.btn{width:100%;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border:none;padding:13px;border-radius:10px;font-family:'Exo 2',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;transition:opacity .2s;}
+.btn:hover{opacity:.88;}
+
+/* MAIN */
+#mainScreen{display:none;}
+header{background:rgba(2,4,8,.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--rim);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.logo{font-family:'Rajdhani',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);}
+.logo span{color:var(--accent);}
+.header-right{display:flex;align-items:center;gap:16px;}
+.btn-sm{background:var(--rim);border:none;color:var(--snow);padding:7px 16px;border-radius:8px;font-family:'Exo 2',sans-serif;font-size:.78rem;font-weight:600;cursor:pointer;transition:background .2s;}
+.btn-sm:hover{background:var(--rim2);}
+
+main{padding:28px 32px;max-width:1400px;margin:0 auto;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-bottom:28px;}
+.stat-card{background:var(--panel);border:1px solid var(--rim);border-radius:14px;padding:18px 20px;}
+.stat-card .val{font-family:'Rajdhani',sans-serif;font-size:1.9rem;font-weight:700;color:var(--white);line-height:1;}
+.stat-card .lbl{font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-top:4px;}
+
+/* FILTER BAR */
+.filter-bar{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
+.filter-bar select,.filter-bar input{background:var(--panel);border:1px solid var(--rim2);border-radius:9px;padding:8px 14px;color:var(--snow);font-family:'Exo 2',sans-serif;font-size:.82rem;outline:none;}
+.filter-bar input{flex:1;min-width:180px;}
+.btn-refresh{background:var(--blue);border:none;color:#fff;padding:8px 18px;border-radius:9px;font-family:'Exo 2',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;border-radius:16px;border:1px solid var(--rim);}
+table{width:100%;border-collapse:collapse;font-size:.82rem;}
+thead{background:var(--panel2);}
+th{padding:12px 16px;text-align:left;font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);white-space:nowrap;}
+td{padding:13px 16px;border-top:1px solid var(--rim);vertical-align:top;}
+tr:hover td{background:rgba(14,111,232,.04);}
+.order-id{font-family:'Rajdhani',sans-serif;font-weight:700;color:var(--accent);font-size:.95rem;}
+.customer-name{font-weight:600;color:var(--white);}
+.customer-detail{color:var(--mist);font-size:.75rem;margin-top:2px;}
+.address-block{color:var(--fog);font-size:.76rem;line-height:1.5;}
+.items-list{color:var(--fog);font-size:.76rem;line-height:1.6;}
+.amount{font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;color:var(--white);}
+.date{color:var(--mist);font-size:.75rem;white-space:nowrap;}
+
+/* STATUS BADGE */
+.badge{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;}
+.badge-pending{background:rgba(255,184,0,.12);color:var(--gold);border:1px solid rgba(255,184,0,.25);}
+.badge-paid{background:rgba(34,197,94,.12);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge-processing{background:rgba(14,111,232,.15);color:var(--blue2);border:1px solid rgba(14,111,232,.3);}
+.badge-shipped{background:rgba(0,204,255,.12);color:var(--accent);border:1px solid rgba(0,204,255,.25);}
+.badge-delivered{background:rgba(34,197,94,.2);color:#4ade80;border:1px solid rgba(34,197,94,.4);}
+.badge-cancelled{background:rgba(255,77,46,.12);color:var(--ember);border:1px solid rgba(255,77,46,.25);}
+
+/* ACTIONS */
+.actions{display:flex;flex-direction:column;gap:6px;min-width:130px;}
+.sel-status{width:100%;background:var(--surface);border:1px solid var(--rim2);border-radius:7px;padding:6px 9px;color:var(--snow);font-family:'Exo 2',sans-serif;font-size:.76rem;outline:none;cursor:pointer;}
+.btn-save{width:100%;background:var(--blue);border:none;color:#fff;padding:6px;border-radius:7px;font-family:'Exo 2',sans-serif;font-size:.74rem;font-weight:600;cursor:pointer;}
+.btn-save:hover{background:var(--blue2);}
+.notes-inp{width:100%;background:var(--surface);border:1px solid var(--rim2);border-radius:7px;padding:6px 9px;color:var(--snow);font-family:'Exo 2',sans-serif;font-size:.74rem;resize:vertical;min-height:50px;outline:none;}
+.supplier-inp{width:100%;background:var(--surface);border:1px solid rgba(0,204,255,.2);border-radius:7px;padding:6px 9px;color:var(--accent);font-family:'Exo 2',sans-serif;font-size:.73rem;resize:vertical;min-height:40px;outline:none;font-style:italic;}
+
+/* EMPTY */
+.empty{text-align:center;padding:60px;color:var(--mist);}
+.empty-icon{font-size:2.5rem;margin-bottom:12px;}
+
+/* TOAST */
+#toast{position:fixed;bottom:24px;right:24px;z-index:999;display:flex;flex-direction:column;gap:8px;}
+.t{background:var(--panel2);border:1px solid var(--rim2);border-radius:10px;padding:12px 18px;font-size:.82rem;animation:slideIn .25s ease;max-width:300px;}
+.t.ok{border-color:rgba(34,197,94,.4);color:#4ade80;}
+.t.err{border-color:rgba(255,77,46,.4);color:var(--ember);}
+@keyframes slideIn{from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
+
+@media(max-width:700px){
+  main{padding:16px;}
+  header{padding:14px 16px;}
+  th,td{padding:10px 10px;}
+}
+</style>
+</head>
+<body>
+
+<div id="loginScreen">
+  <div class="login-box">
+    <div style="font-size:2.2rem;margin-bottom:12px;">⚡</div>
+    <h1>Nex<span style="color:var(--accent)">Home</span> Admin</h1>
+    <p>Painel de gerenciamento de pedidos</p>
+    <input class="inp" id="tokenInput" type="password" placeholder="Token de acesso" onkeydown="if(event.key==='Enter')doLogin()">
+    <button class="btn" onclick="doLogin()">Entrar</button>
+    <p id="loginErr" style="color:var(--ember);font-size:.8rem;margin-top:12px;display:none;">Token inválido</p>
+  </div>
+</div>
+
+<div id="mainScreen">
+  <header>
+    <div class="logo">Nex<span>Home</span> <span style="color:var(--mist);font-weight:400;font-size:.85rem;margin-left:8px;">Admin</span></div>
+    <div class="header-right">
+      <span id="headerDate" style="color:var(--mist);font-size:.78rem;"></span>
+      <button class="btn-sm" onclick="logout()">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="stats" id="statsRow"></div>
+
+    <div class="filter-bar">
+      <input id="searchInput" placeholder="Buscar por nome, e-mail, ID..." oninput="renderTable()">
+      <select id="statusFilter" onchange="renderTable()">
+        <option value="">Todos os status</option>
+        <option value="pending">Pendente</option>
+        <option value="paid">Pago</option>
+        <option value="processing">Processando</option>
+        <option value="shipped">Enviado</option>
+        <option value="delivered">Entregue</option>
+        <option value="cancelled">Cancelado</option>
+      </select>
+      <button class="btn-refresh" onclick="loadOrders()">↻ Atualizar</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Cliente</th>
+            <th>Endereço</th>
+            <th>Itens</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Link Fornecedor</th>
+            <th>Obs</th>
+            <th>Data</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="ordersBody"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<div id="toast"></div>
+
+<script>
+let TOKEN = '';
+let orders = [];
+
+const STATUS_LABELS = {
+  pending: 'Pendente',
+  paid: 'Pago',
+  processing: 'Processando',
+  shipped: 'Enviado',
+  delivered: 'Entregue',
+  cancelled: 'Cancelado',
+};
+
+function doLogin() {
+  const t = document.getElementById('tokenInput').value.trim();
+  if (!t) return;
+  TOKEN = t;
+  loadOrders();
+}
+
+function logout() {
+  TOKEN = '';
+  orders = [];
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('mainScreen').style.display = 'none';
+  document.getElementById('tokenInput').value = '';
+}
+
+async function loadOrders() {
+  try {
+    const r = await fetch('/api/admin/orders', {
+      headers: { 'x-admin-token': TOKEN }
+    });
+    if (r.status === 401) {
+      document.getElementById('loginErr').style.display = 'block';
+      return;
+    }
+    document.getElementById('loginErr').style.display = 'none';
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('mainScreen').style.display = 'block';
+    document.getElementById('headerDate').textContent = new Date().toLocaleString('pt-BR');
+    const data = await r.json();
+    orders = data.orders || [];
+    renderStats();
+    renderTable();
+  } catch (e) {
+    toast('Erro ao carregar pedidos', 'err');
+  }
+}
+
+function renderStats() {
+  const total = orders.length;
+  const paid = orders.filter(o => o.status === 'paid' || o.status === 'delivered' || o.status === 'shipped').length;
+  const pending = orders.filter(o => o.status === 'pending').length;
+  const revenue = orders
+    .filter(o => ['paid','shipped','delivered'].includes(o.status))
+    .reduce((s, o) => s + parseFloat(o.totalAmount || 0), 0);
+
+  document.getElementById('statsRow').innerHTML = `
+    <div class="stat-card"><div class="val">${total}</div><div class="lbl">Total de Pedidos</div></div>
+    <div class="stat-card"><div class="val" style="color:var(--green)">${paid}</div><div class="lbl">Pagos / Enviados</div></div>
+    <div class="stat-card"><div class="val" style="color:var(--gold)">${pending}</div><div class="lbl">Pendentes</div></div>
+    <div class="stat-card"><div class="val" style="color:var(--accent)">R$ ${revenue.toFixed(2).replace('.',',')}</div><div class="lbl">Receita Total</div></div>
+  `;
+}
+
+function renderTable() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const statusF = document.getElementById('statusFilter').value;
+
+  const filtered = orders.filter(o => {
+    const matchSearch = !search ||
+      o.customerName?.toLowerCase().includes(search) ||
+      o.customerEmail?.toLowerCase().includes(search) ||
+      String(o.id).includes(search);
+    const matchStatus = !statusF || o.status === statusF;
+    return matchSearch && matchStatus;
+  });
+
+  const tbody = document.getElementById('ordersBody');
+  if (!filtered.length) {
+    tbody.innerHTML = `<tr><td colspan="10"><div class="empty"><div class="empty-icon">📭</div>Nenhum pedido encontrado</div></td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(o => {
+    const items = Array.isArray(o.items) ? o.items : [];
+    const itemsStr = items.map(i => `${i.qty}× ${i.name}`).join('<br>');
+    const date = new Date(o.createdAt).toLocaleString('pt-BR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
+    return `
+    <tr id="row-${o.id}">
+      <td><span class="order-id">#${o.id}</span>${o.mpPaymentId ? `<div class="customer-detail">MP: ${o.mpPaymentId}</div>` : ''}</td>
+      <td>
+        <div class="customer-name">${esc(o.customerName)}</div>
+        <div class="customer-detail">${esc(o.customerEmail)}</div>
+        <div class="customer-detail">${esc(o.customerPhone)}</div>
+        <div class="customer-detail">CPF: ${esc(o.customerCpf)}</div>
+      </td>
+      <td>
+        <div class="address-block">
+          ${esc(o.addressStreet)}, ${esc(o.addressNumber)}${o.addressComplement ? ' ' + esc(o.addressComplement) : ''}<br>
+          ${esc(o.addressNeighborhood)}<br>
+          ${esc(o.addressCity)} – ${esc(o.addressState)}<br>
+          CEP: ${esc(o.addressZip)}
+        </div>
+      </td>
+      <td><div class="items-list">${itemsStr}</div></td>
+      <td><div class="amount">R$ ${parseFloat(o.totalAmount||0).toFixed(2).replace('.',',')}</div></td>
+      <td><span class="badge badge-${o.status}">${STATUS_LABELS[o.status] || o.status}</span></td>
+      <td>
+        <textarea class="supplier-inp" id="supplier-${o.id}" placeholder="Cole aqui o link da Amazon/AliExpress para este pedido...">${esc(o.supplierLinks || '')}</textarea>
+      </td>
+      <td>
+        <textarea class="notes-inp" id="notes-${o.id}" placeholder="Observações internas...">${esc(o.notes || '')}</textarea>
+      </td>
+      <td><div class="date">${date}</div></td>
+      <td>
+        <div class="actions">
+          <select class="sel-status" id="sel-${o.id}">
+            ${Object.entries(STATUS_LABELS).map(([v,l]) => `<option value="${v}"${o.status===v?' selected':''}>${l}</option>`).join('')}
+          </select>
+          <button class="btn-save" onclick="saveOrder(${o.id})">Salvar</button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+async function saveOrder(id) {
+  const status = document.getElementById(`sel-${id}`)?.value;
+  const notes = document.getElementById(`notes-${id}`)?.value;
+  const supplierLinks = document.getElementById(`supplier-${id}`)?.value;
+  try {
+    const r = await fetch(`/api/admin/orders/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json', 'x-admin-token': TOKEN },
+      body: JSON.stringify({ status, notes, supplierLinks })
+    });
+    if (!r.ok) throw new Error('Erro');
+    const data = await r.json();
+    const idx = orders.findIndex(o => o.id === id);
+    if (idx !== -1) orders[idx] = data.order;
+    renderStats();
+    renderTable();
+    toast('Pedido #' + id + ' atualizado!', 'ok');
+  } catch (e) {
+    toast('Erro ao salvar pedido', 'err');
+  }
+}
+
+function esc(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function toast(msg, type = 'ok') {
+  const el = document.createElement('div');
+  el.className = `t ${type}`;
+  el.textContent = msg;
+  document.getElementById('toast').appendChild(el);
+  setTimeout(() => el.remove(), 3500);
+}
+</script>
+</body>
+</html>
