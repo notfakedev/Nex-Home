@@ -168,8 +168,9 @@ section{position:relative;z-index:1;}
 .pcard:hover{transform:translateY(-10px) scale(1.01);border-color:rgba(37,137,255,.35);box-shadow:0 28px 64px rgba(14,111,232,.22);}
 .pcard-img{height:200px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--panel2),var(--surface));display:flex;align-items:center;justify-content:center;cursor:pointer;}
 .pcard-img::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(14,111,232,.18),transparent 68%);}
-.pcard-img svg{position:relative;z-index:1;transition:transform .4s;}
-.pcard:hover .pcard-img svg{transform:scale(1.1) translateY(-5px);}
+.pcard-img svg,.pcard-img img{position:relative;z-index:1;transition:transform .4s,filter .4s;}
+.pcard:hover .pcard-img svg,.pcard:hover .pcard-img img{transform:scale(1.1) translateY(-5px);}
+.pcard-img img{height:180px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 0 18px rgba(0,204,255,.35));}
 .pcard-badge{position:absolute;top:14px;left:14px;z-index:3;padding:4px 12px;border-radius:999px;font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;}
 .badge-fire{background:linear-gradient(135deg,#C62828,#F44336);color:#fff;box-shadow:0 2px 12px rgba(198,40,40,.4);}
 .badge-new{background:linear-gradient(135deg,var(--blue),var(--accent));color:#fff;box-shadow:0 2px 12px rgba(0,204,255,.3);}
@@ -618,8 +619,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
     <div class="pcard reveal">
       <span class="pcard-badge badge-fire">🔥 Mais vendido</span>
       <div class="pcard-img" onclick="openProductPage('lampada')" title="Ver detalhes">
-        <svg width="110" height="130" viewBox="0 0 110 130"><defs><radialGradient id="g1" cx="50%" cy="38%" r="52%"><stop offset="0%" stop-color="#00FFD0"/><stop offset="45%" stop-color="#00CCFF"/><stop offset="100%" stop-color="#0E6FE8"/></radialGradient><filter id="f1"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-        <circle cx="55" cy="55" r="44" fill="url(#g1)" opacity=".12"/><ellipse cx="55" cy="54" rx="29" ry="31" fill="url(#g1)" filter="url(#f1)" opacity=".96"/><ellipse cx="55" cy="54" rx="29" ry="31" fill="none" stroke="rgba(0,255,208,.35)" stroke-width="1.5"/><rect x="43" y="84" width="24" height="8" rx="3" fill="#0D1628" stroke="#1C2E4A" stroke-width="1"/><rect x="45" y="92" width="20" height="6" rx="3" fill="#0A1120"/><rect x="47" y="98" width="16" height="5" rx="2.5" fill="#0D1628"/><line x1="55" y1="37" x2="55" y2="50" stroke="white" stroke-width="2" stroke-opacity=".75"/><line x1="46" y1="41" x2="52" y2="48" stroke="white" stroke-width="1.5" stroke-opacity=".5"/><line x1="64" y1="41" x2="58" y2="48" stroke="white" stroke-width="1.5" stroke-opacity=".5"/><circle cx="55" cy="54" r="7" fill="white" opacity=".18" filter="url(#f1)"/></svg>
+        <img src="/lampada-rgb.jpg" alt="Smart Lâmpada Wi-Fi RGB+ Alexa">
       </div>
       <div class="pcard-body">
         <div class="pcard-cat">Iluminação Smart</div>
