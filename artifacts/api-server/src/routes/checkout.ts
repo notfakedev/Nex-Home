@@ -2,6 +2,7 @@ import { Router, type IRouter } from "express";
 import { MercadoPagoConfig, Preference } from "mercadopago";
 import { db, ordersTable } from "@workspace/db";
 import { eq } from "drizzle-orm";
+import { sendNewOrderNotification } from "../lib/mailer";
 
 const router: IRouter = Router();
 
@@ -77,7 +78,7 @@ router.post("/checkout", async (req, res) => {
           address: {
             zip_code: address.zip.replace(/\D/g, ""),
             street_name: address.street,
-            street_number: Number(address.number) || 0,
+            street_number: String(Number(address.number) || 0),
           },
         },
         back_urls: {
@@ -132,13 +133,37 @@ router.post("/webhook/mercadopago", async (req, res) => {
               cancelled: "cancelled",
             };
             const newStatus = statusMap[payment.status ?? ""] ?? "pending";
-            await db.update(ordersTable)
+            const [updated] = await db.update(ordersTable)
               .set({
                 status: newStatus,
                 mpPaymentId: String(payment.id ?? data.id),
                 updatedAt: new Date(),
               })
-              .where(eq(ordersTable.id, orderId));
+              .where(eq(ordersTable.id, orderId))
+              .returning();
+
+            if (newStatus === "paid" && updated) {
+              const orderItems = Array.isArray(updated.items)
+                ? (updated.items as { name: string; price: number; qty: number }[])
+                : [];
+              await sendNewOrderNotification({
+                orderId: updated.id,
+                customerName: updated.customerName,
+                customerEmail: updated.customerEmail,
+                customerPhone: updated.customerPhone,
+                customerCpf: updated.customerCpf,
+                addressStreet: updated.addressStreet,
+                addressNumber: updated.addressNumber,
+                addressComplement: updated.addressComplement,
+                addressNeighborhood: updated.addressNeighborhood,
+                addressCity: updated.addressCity,
+                addressState: updated.addressState,
+                addressZip: updated.addressZip,
+                items: orderItems,
+                totalAmount: updated.totalAmount,
+                mpPaymentId: updated.mpPaymentId,
+              });
+            }
           }
         }
       }
