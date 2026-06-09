@@ -1,1 +1,1 @@
-- [OrbytStore project](orbytstore.md) — Smart home dropshipping store in PT-BR; Mercado Pago + Gmail email + products DB seeded on startup.
+- [Route prefix doubling](route-prefix.md) — never add /api prefix inside route files; app.ts already mounts at /api

@@ -6,6 +6,8 @@ export const productsTable = pgTable("products", {
   name: text("name").notNull(),
   price: numeric("price", { precision: 10, scale: 2 }).notNull(),
   originalPrice: numeric("original_price", { precision: 10, scale: 2 }),
+  promoPrice: numeric("promo_price", { precision: 10, scale: 2 }),
+  promoEndDate: timestamp("promo_end_date"),
   image: text("image").notNull(),
   category: text("category").notNull(),
   description: text("description").notNull(),

@@ -107,10 +107,12 @@ router.patch("/admin/products/:id", requireAdmin, async (req, res) => {
   const body = req.body as Record<string, any>;
   try {
     const updates: Record<string, unknown> = { updatedAt: new Date() };
-    const fields = ["name","price","originalPrice","image","category","description","badge","installments","rating","reviewCount","sortOrder"];
-    fields.forEach(f => { if (body[f] !== undefined) updates[f === "originalPrice" ? "originalPrice" : f] = body[f]; });
+    const fields = ["name","price","image","category","description","badge","installments","rating","reviewCount","sortOrder"];
+    fields.forEach(f => { if (body[f] !== undefined) updates[f] = body[f]; });
     if (body.active !== undefined) updates.active = Boolean(body.active);
     if (body.originalPrice !== undefined) updates.originalPrice = body.originalPrice || null;
+    if (body.promoPrice !== undefined) updates.promoPrice = body.promoPrice || null;
+    if (body.promoEndDate !== undefined) updates.promoEndDate = body.promoEndDate ? new Date(body.promoEndDate) : null;
 
     const [product] = await db.update(productsTable)
       .set(updates)

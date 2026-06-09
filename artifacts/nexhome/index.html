@@ -29,6 +29,14 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;font-size:16px;background:var(--void);}
 body{background:var(--void);color:var(--snow);font-family:'Exo 2',sans-serif;overflow-x:hidden;cursor:auto;-webkit-tap-highlight-color:transparent;}
+/* ANNOUNCEMENT BAR */
+#announcement-bar{background:#0E6FE8;color:#fff;text-align:center;padding:10px 48px 10px 20px;font-size:.82rem;font-weight:600;position:relative;z-index:201;display:none;}
+#announcement-bar a{color:rgba(255,255,255,.85);text-decoration:underline;cursor:pointer;}
+#announcement-bar .ann-close{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.7);cursor:pointer;font-size:1.1rem;line-height:1;padding:4px;}
+/* COUNTDOWN */
+.promo-countdown{display:flex;align-items:center;gap:7px;background:rgba(255,77,46,.1);border:1px solid rgba(255,77,46,.3);border-radius:8px;padding:6px 10px;margin-top:8px;font-size:.73rem;color:#FF6B4A;}
+.promo-countdown .cd-label{font-weight:600;}
+.promo-countdown .cd-timer{font-family:'Rajdhani',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.05em;color:#FF4D2E;min-width:68px;text-align:right;}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:9997;}
 #cvs{position:fixed;inset:0;z-index:0;pointer-events:none;}
 .scanline{position:fixed;inset:0;z-index:9996;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px);}
@@ -518,25 +526,31 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
   </div>
 </nav>
 
+<!-- ANNOUNCEMENT BAR -->
+<div id="announcement-bar">
+  <span id="announcement-text">🚀 Frete grátis em compras acima de R$ 299!</span>
+  <button class="ann-close" onclick="this.parentElement.style.display='none'" aria-label="Fechar">✕</button>
+</div>
+
 <div id="mainSite">
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow"><span class="pulse-dot"></span> Smart Home · Tendência 2026</div>
+    <div class="hero-eyebrow"><span class="pulse-dot"></span> <span id="hero-eyebrow-text">Smart Home · Tendência 2026</span></div>
     <h1>
-      <span class="h1-main">Sua Casa.</span>
-      <span class="h1-accent">Inteligente.</span>
-      <span class="h1-sub">Conectada ao Futuro.</span>
+      <span class="h1-main" id="hero-line1">Sua Casa.</span>
+      <span class="h1-accent" id="hero-line2">Inteligente.</span>
+      <span class="h1-sub" id="hero-line3">Conectada ao Futuro.</span>
     </h1>
-    <p class="hero-desc">Os melhores dispositivos de automação residencial com os menores preços do Brasil. Controle tudo pelo celular, voz ou automações inteligentes.</p>
+    <p class="hero-desc" id="hero-subtitle">Os melhores dispositivos de automação residencial com os menores preços do Brasil. Controle tudo pelo celular, voz ou automações inteligentes.</p>
     <div class="hero-ctas">
-      <a href="#kit" class="btn-primary" onclick="goHome(event,'#kit')">
+      <a href="#kit" class="btn-primary" id="hero-cta-primary" onclick="goHome(event,'#kit')">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
         Ver Kit Promocional
       </a>
-      <a href="#produtos" class="btn-ghost" onclick="goHome(event,'#produtos')">Explorar produtos →</a>
+      <a href="#produtos" class="btn-ghost" id="hero-cta-secondary" onclick="goHome(event,'#produtos')">Explorar produtos →</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item"><span class="stat-num"><b id="ctr1">0</b>+</span><span class="stat-lbl">Produtos</span></div>
@@ -937,7 +951,7 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
 
 <!-- WHY -->
 <section class="why-section" id="sobre">
-  <div class="section-header reveal"><div class="sh-label">Nossos diferenciais</div><h2>Por que a OrbytStore?</h2><p>Especialistas em automação residencial com o suporte mais completo do Brasil</p></div>
+  <div class="section-header reveal"><div class="sh-label">Nossos diferenciais</div><h2 id="why-title">Por que a OrbytStore?</h2><p id="why-subtitle">Especialistas em automação residencial com o suporte mais completo do Brasil</p></div>
   <div class="why-grid">
     <div class="why-card reveal"><div class="why-ico">🇧🇷</div><div class="why-title">100% Homologados</div><div class="why-text">Certificação Anatel, padrão NBR 14136 e bivolt em todos os produtos.</div></div>
     <div class="why-card reveal"><div class="why-ico">🚚</div><div class="why-title">Entrega em 48h</div><div class="why-text">Frete grátis acima de R$ 299. Envio expresso para todo o Brasil.</div></div>
@@ -977,9 +991,9 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
       <a onclick="openLegal('privacidade')" style="color:var(--mist);font-size:.75rem;cursor:pointer;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--blue3)'" onmouseout="this.style.color='var(--mist)'">Política de Privacidade</a>
       <a onclick="openLegal('termos')" style="color:var(--mist);font-size:.75rem;cursor:pointer;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--blue3)'" onmouseout="this.style.color='var(--mist)'">Termos de Uso</a>
       <a onclick="openLegal('troca')" style="color:var(--mist);font-size:.75rem;cursor:pointer;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--blue3)'" onmouseout="this.style.color='var(--mist)'">Trocas &amp; Devoluções</a>
-      <a href="https://wa.me/5511999999999" target="_blank" style="color:var(--mist);font-size:.75rem;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--blue3)'" onmouseout="this.style.color='var(--mist)'">SAC: (11) 99999-9999</a>
+      <a id="footer-sac-link" href="https://wa.me/5511999999999" target="_blank" style="color:var(--mist);font-size:.75rem;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--blue3)'" onmouseout="this.style.color='var(--mist)'">SAC: <span id="footer-phone-text">(11) 99999-9999</span></a>
     </div>
-    <p style="font-size:.72rem;color:var(--mist);">OrbytStore Comércio de Eletrônicos Ltda. — CNPJ: <b style="color:var(--fog)">XX.XXX.XXX/XXXX-XX</b> — São Paulo/SP</p>
+    <p id="footer-company-text" style="font-size:.72rem;color:var(--mist);">OrbytStore Comércio de Eletrônicos Ltda. — CNPJ: <b style="color:var(--fog)">XX.XXX.XXX/XXXX-XX</b> — São Paulo/SP</p>
     <div style="display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;">
       <p style="font-size:.72rem;color:var(--mist);">© 2026 OrbytStore. Todos os direitos reservados.</p>
       <span style="color:var(--rim2);font-size:.7rem;">|</span>
@@ -1828,25 +1842,94 @@ footer{background:var(--surface);border-top:1px solid var(--rim);padding:72px 6%
 </div>
 
 <script>
-/* ── PRODUCT VISIBILITY SYNC ── */
-async function syncProductVisibility(){
-  try{
-    const res=await fetch('/api/products');
-    if(!res.ok)return;
-    const json=await res.json();
-    const products=Array.isArray(json)?json:(json.products||[]);
-    const activeMap={};
-    products.forEach(p=>{activeMap[p.slug]=p.active;});
-    document.querySelectorAll('[data-slug]').forEach(card=>{
-      const slug=card.dataset.slug;
-      if(slug in activeMap){
-        if(!activeMap[slug])card.style.display='none';
-        else card.style.display='';
-      }
-    });
-  }catch(e){console.warn('syncProductVisibility failed',e);}
+/* ── SITE SETTINGS SYNC ── */
+const cdIntervals={};
+function fmtCountdown(ms){
+  if(ms<=0)return'Expirado';
+  const s=Math.floor(ms/1000),h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sc=s%60;
+  if(h>24){const d=Math.floor(h/24);return`${d}d ${h%24}h ${m}m`;}
+  return`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(sc).padStart(2,'0')}`;
 }
-syncProductVisibility();
+function startCountdown(el,endDate){
+  const key=endDate.toISOString();
+  if(cdIntervals[key])return;
+  const tick=()=>{
+    const ms=endDate-Date.now();
+    if(ms<=0){el.textContent='⌛ Oferta encerrada!';clearInterval(cdIntervals[key]);delete cdIntervals[key];return;}
+    el.textContent=fmtCountdown(ms);
+  };
+  tick();
+  cdIntervals[key]=setInterval(tick,1000);
+}
+async function syncSite(){
+  try{
+    const [settRes,prodRes]=await Promise.all([fetch('/api/settings'),fetch('/api/products')]);
+    /* ── APPLY SETTINGS ── */
+    if(settRes.ok){
+      const{settings:s}=await settRes.json();
+      const setText=(id,val)=>{const el=document.getElementById(id);if(el&&val)el.textContent=val;};
+      const setHtml=(id,val)=>{const el=document.getElementById(id);if(el&&val)el.innerHTML=val;};
+      setText('hero-line1',s.hero_line1);setText('hero-line2',s.hero_line2);setText('hero-line3',s.hero_line3);
+      setText('hero-eyebrow-text',s.hero_eyebrow);setText('hero-subtitle',s.hero_subtitle);
+      setText('why-title',s.why_title);setText('why-subtitle',s.why_subtitle);
+      /* CTA buttons */
+      const cta1=document.getElementById('hero-cta-primary');
+      if(cta1&&s.hero_cta_primary)cta1.childNodes[cta1.childNodes.length-1].textContent=' '+s.hero_cta_primary;
+      const cta2=document.getElementById('hero-cta-secondary');
+      if(cta2&&s.hero_cta_secondary)cta2.textContent=s.hero_cta_secondary;
+      /* WA */
+      if(s.whatsapp_number){
+        const msg=encodeURIComponent(s.whatsapp_message||'');
+        const href=`https://wa.me/${s.whatsapp_number}?text=${msg}`;
+        const waBtn=document.getElementById('wa-btn');if(waBtn)waBtn.href=href;
+        const sacLink=document.getElementById('footer-sac-link');if(sacLink)sacLink.href=href;
+      }
+      if(s.footer_phone)setText('footer-phone-text',s.footer_phone);
+      /* Footer company */
+      if(s.footer_company||s.footer_cnpj||s.footer_city){
+        const fc=document.getElementById('footer-company-text');
+        if(fc)fc.innerHTML=`${s.footer_company||'OrbytStore'} — CNPJ: <b style="color:var(--fog)">${s.footer_cnpj||'XX.XXX.XXX/XXXX-XX'}</b> — ${s.footer_city||'São Paulo/SP'}`;
+      }
+      /* Announcement bar */
+      const bar=document.getElementById('announcement-bar');
+      if(bar){
+        if(s.announcement_active==='true'){
+          bar.style.display='block';
+          if(s.announcement_bg)bar.style.background=s.announcement_bg;
+          const txt=document.getElementById('announcement-text');
+          if(txt&&s.announcement_text)txt.textContent=s.announcement_text;
+        }else{bar.style.display='none';}
+      }
+    }
+    /* ── APPLY PRODUCTS ── */
+    if(prodRes.ok){
+      const{products}=await prodRes.json();
+      const productMap={};
+      products.forEach(p=>{productMap[p.slug]=p;});
+      document.querySelectorAll('[data-slug]').forEach(card=>{
+        const slug=card.dataset.slug;
+        const p=productMap[slug];
+        if(!p){card.style.display='none';return;}
+        card.style.display='';
+        /* inject countdown if promoPrice + promoEndDate valid */
+        const endDate=p.promoEndDate?new Date(p.promoEndDate):null;
+        const hasPromo=p.promoPrice&&endDate&&endDate>new Date();
+        let cdEl=card.querySelector('.promo-countdown');
+        if(hasPromo){
+          if(!cdEl){
+            cdEl=document.createElement('div');
+            cdEl.className='promo-countdown';
+            cdEl.innerHTML=`<span class="cd-label">🔥 Oferta: R$ ${parseFloat(p.promoPrice).toFixed(2).replace('.',',')} —</span> <span class="cd-timer"></span>`;
+            const footer=card.querySelector('.pcard-footer');
+            if(footer)footer.prepend(cdEl);
+          }
+          startCountdown(cdEl.querySelector('.cd-timer'),endDate);
+        }else if(cdEl){cdEl.remove();}
+      });
+    }
+  }catch(e){console.warn('syncSite failed',e);}
+}
+syncSite();
 
 /* ── PARTICLES ── */
 const cvs=document.getElementById('cvs'),ctx=cvs.getContext('2d');
