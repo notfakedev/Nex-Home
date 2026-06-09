@@ -1,0 +1,1 @@
+- [OrbytStore project](orbytstore.md) — Smart home dropshipping store in PT-BR; Mercado Pago + Gmail email + products DB seeded on startup.
